@@ -3,6 +3,13 @@
   "version": "0.0.0",
   "description": "Shareable configurations of ESLint for me.",
   "main": "base.js",
+  "files": [
+    "lib/extend.js",
+    "base.js",
+    "browser.js",
+    "nodejs.js",
+    "react.js"
+  ],
   "scripts": {
     "test": "node lib/check-rules.js"
   },
@@ -21,9 +28,8 @@
     "url": "git+https://github.com/mysticatea/eslint-config.git"
   },
   "keywords": [
-    "eslint-config",
     "eslint",
-    "config"
+    "eslintconfig"
   ],
   "author": "Toru Nagashima",
   "license": "MIT",
