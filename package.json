@@ -1,0 +1,34 @@
+{
+  "name": "eslint-config-mysticatea",
+  "version": "0.0.0",
+  "description": "Shareable configurations of ESLint for me.",
+  "main": "base.js",
+  "scripts": {
+    "test": "node lib/check-rules.js"
+  },
+  "dependencies": {
+    "object-assign": "^3.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^0.22.1",
+    "eslint-plugin-react": "^2.5.0"
+  },
+  "peerDependencies": {
+    "eslint": "^0.22.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mysticatea/eslint-config.git"
+  },
+  "keywords": [
+    "eslint-config",
+    "eslint",
+    "config"
+  ],
+  "author": "Toru Nagashima",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mysticatea/eslint-config/issues"
+  },
+  "homepage": "https://github.com/mysticatea/eslint-config#readme"
+}

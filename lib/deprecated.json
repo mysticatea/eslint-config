@@ -1,0 +1,14 @@
+{
+  "generator-star": true,
+  "max-depth" : true,
+  "max-len" : true,
+  "max-params" : true,
+  "max-statements" : true,
+  "no-bitwise" : true,
+  "no-comma-dangle" : true,
+  "no-empty-class" : true,
+  "no-plusplus" : true,
+  "no-space-before-semi" : true,
+  "space-after-function-name" : true,
+  "space-before-function-parentheses" : true
+}
