@@ -134,7 +134,7 @@ module.exports = {
     "no-sync": 0,
 
     // Stylistic Issues Section
-    "brace-style": [2, "stroustrup", { "allowSingleLine": true }],
+    "brace-style": [2, "stroustrup", {"allowSingleLine": true}],
     "camelcase": [2, {"properties": "never"}], // For APIs as is so.
     "comma-spacing": 2,
     "comma-style": 2,
