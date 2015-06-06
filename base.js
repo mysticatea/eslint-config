@@ -51,7 +51,7 @@ module.exports = {
     "no-sparse-arrays": 2,
     "no-unreachable": 2,
     "use-isnan": 2,
-    "valid-jsdoc": 2,
+    "valid-jsdoc": [2, {"requireReturn": false}],
     "valid-typeof": 2,
 
     // Best Practices Section
@@ -135,7 +135,7 @@ module.exports = {
 
     // Stylistic Issues Section
     "brace-style": [2, "stroustrup", {"allowSingleLine": true}],
-    "camelcase": [2, {"properties": "never"}], // For APIs as is so.
+    "camelcase": 2,
     "comma-spacing": 2,
     "comma-style": 2,
     "consistent-this": 0, // Favor AllowFunction or bind(this), and I like more acculate name.
@@ -144,7 +144,7 @@ module.exports = {
     "func-style": 0, // Case by case.
     "indent": [2, 2, {"indentSwitchCase": true}], // Can I believe this rule?
     "key-spacing": 2,
-    "lines-around-comment": 2,
+    "lines-around-comment": 0, // Turn off until the first comment is not errored in blocks: https://github.com/eslint/eslint/issues/2667
     "linebreak-style": [2, "unix"],
     "max-nested-callbacks": [2, 3],
     "new-cap": 2,
@@ -161,7 +161,7 @@ module.exports = {
     "no-spaced-func": 2,
     "no-ternary": 0, // I like it.
     "no-trailing-spaces": 2,
-    "no-underscore-dangle": 2,
+    "no-underscore-dangle": 0, // It often is used for private members.
     "no-unneeded-ternary": 2,
     "no-wrap-func": 2,
     "object-curly-spacing": 2,
