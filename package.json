@@ -17,12 +17,11 @@
     "object-assign": "^3.0.0"
   },
   "devDependencies": {
-    "eslint": "^0.22.1",
-    "eslint-config-mysticatea": "^0.1.0",
+    "eslint": "~0.23.0",
     "eslint-plugin-react": "^2.5.0"
   },
   "peerDependencies": {
-    "eslint": "^0.22.1"
+    "eslint": "~0.23.0"
   },
   "repository": {
     "type": "git",

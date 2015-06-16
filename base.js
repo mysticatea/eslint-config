@@ -27,7 +27,7 @@ module.exports = {
     // Possible Errors Section
     "comma-dangle": 2,
     "no-cond-assign": 2,
-    "no-console": 2,
+    "no-console": 1, // Useful to debug.
     "no-constant-condition": 2,
     "no-control-regex": 2,
     "no-debugger": 2,
@@ -38,10 +38,10 @@ module.exports = {
     "no-empty": 2,
     "no-ex-assign": 2,
     "no-extra-boolean-cast": 2,
-    "no-extra-parens": 0, // Conflicted to no-cond-assign
+    "no-extra-parens": [2, "functions"],
     "no-extra-semi": 2,
     "no-func-assign": 2,
-    "no-inner-declarations": 2,
+    "no-inner-declarations": [2, "both"],
     "no-invalid-regexp": 2,
     "no-irregular-whitespace": 2,
     "no-negated-in-lhs": 2,
@@ -108,8 +108,6 @@ module.exports = {
     "yoda": [2, "never", {"exceptRange": true}], // I like comparing such as `0 <= a && a < 10`.
 
     // Strict Mode Section
-    "global-strict": 0, // Deprecated
-    "no-extra-strict": 0, // Deprecated
     "strict": [2, "global"],
 
     // Variables Section
@@ -138,6 +136,7 @@ module.exports = {
     "camelcase": 2,
     "comma-spacing": 2,
     "comma-style": 2,
+    "computed-property-spacing": 2,
     "consistent-this": 0, // Favor AllowFunction or bind(this), and I like more acculate name.
     "eol-last": 2,
     "func-names": 2,
@@ -163,7 +162,6 @@ module.exports = {
     "no-trailing-spaces": 2,
     "no-underscore-dangle": 0, // It often is used for private members.
     "no-unneeded-ternary": 2,
-    "no-wrap-func": 2,
     "object-curly-spacing": 2,
     "one-var": [2, {"initialized": "never", "uninitialized": "always"}], // I like this.
     "operator-assignment": 0, // It makes no difference to me.
@@ -177,17 +175,17 @@ module.exports = {
     "space-after-keywords": 2,
     "space-before-blocks": 2,
     "space-before-function-paren": [2, "never"],
-    "space-in-brackets": 2,
     "space-in-parens": 2,
     "space-infix-ops": 2,
     "space-return-throw-case": 2,
     "space-unary-ops": 2,
-    "spaced-line-comment": 2,
+    "spaced-comment": 2,
     "wrap-regex": 0, // I don't need.
 
     // ECMAScript 6 Section
     "generator-star-spacing": [2, "after"],
     "no-var": 2,
-    "object-shorthand": 2
+    "object-shorthand": 2,
+    "prefer-const": 2
   }
 };
