@@ -8,7 +8,8 @@
     "base.js",
     "browser.js",
     "nodejs.js",
-    "react.js"
+    "react.js",
+    "es5.js"
   ],
   "scripts": {
     "test": "node lib/check-rules.js"
