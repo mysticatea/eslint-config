@@ -1,7 +1,3 @@
 {
-  "extends": "mysticatea/nodejs",
-  "rules": {
-    "quote-props": 0,
-    "no-var": 0
-  }
+  "env": {"node": true}
 }

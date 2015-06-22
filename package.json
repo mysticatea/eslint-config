@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-mysticatea",
-  "version": "0.3.0",
+  "version": "0.23.0",
   "description": "Shareable configurations of ESLint for me.",
   "main": "base.js",
   "files": [
