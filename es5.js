@@ -27,8 +27,14 @@ module.exports = extend(base, {
   },
 
   "rules": {
+    // Possible Errors Section
+    "no-inner-declarations": [2, "functions"],
+
     // Best Practices Section
     "no-proto": 2,
+
+    // Stylistic Issues Section
+    "func-names": 0,
 
     // ECMAScript 6 Section
     "generator-star-spacing": 0,

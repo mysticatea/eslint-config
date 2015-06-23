@@ -18,7 +18,7 @@ module.exports = {
     "regexYFlag": true,
     "restParams": true,
     "spread": true,
-    "superInFunctions": true,
+    "superInFunctions": false,
     "templateStrings": true,
     "unicodeCodePointEscapes": true
   },
