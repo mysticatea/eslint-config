@@ -186,6 +186,25 @@ module.exports = {
     "generator-star-spacing": [2, "after"],
     "no-var": 2,
     "object-shorthand": 2,
-    "prefer-const": 2
+    "prefer-const": 2,
+
+    // Deprecated
+    "generator-star": 0,
+    "global-strict": 0,
+    "max-depth": 0,
+    "max-len": 0,
+    "max-params": 0,
+    "max-statements": 0,
+    "no-bitwise": 0,
+    "no-comma-dangle": 0,
+    "no-empty-class": 0,
+    "no-extra-strict": 0,
+    "no-plusplus": 0,
+    "no-space-before-semi": 0,
+    "no-wrap-func": 0,
+    "space-after-function-name": 0,
+    "space-before-function-parentheses": 0,
+    "space-in-brackets": 0,
+    "spaced-line-comment": 0
   }
 };
