@@ -21,6 +21,7 @@ module.exports = extend(base, {
     "react/no-unknown-property": 2,
     "react/prop-types": 2,
     "react/react-in-jsx-scope": 2,
+    "react/require-extension": 2,
     "react/self-closing-comp": 2,
     "react/sort-comp": 2,
     "react/wrap-multilines": 2

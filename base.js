@@ -49,6 +49,7 @@ module.exports = {
     "no-regex-spaces": 2,
     "no-reserved-keys": 0, // Allowed on ES5.
     "no-sparse-arrays": 2,
+    "no-unexpected-multiline": 0, // Needless surely.
     "no-unreachable": 2,
     "use-isnan": 2,
     "valid-jsdoc": [2, {"requireReturn": false}],
@@ -132,6 +133,7 @@ module.exports = {
     "no-sync": 0,
 
     // Stylistic Issues Section
+    "array-bracket-spacing": 2,
     "brace-style": [2, "stroustrup", {"allowSingleLine": true}],
     "camelcase": 2,
     "comma-spacing": 2,
@@ -143,7 +145,7 @@ module.exports = {
     "func-style": 0, // Case by case.
     "indent": [2, 2, {"indentSwitchCase": true}], // Can I believe this rule?
     "key-spacing": 2,
-    "lines-around-comment": 0, // Turn off until the first comment is not errored in blocks: https://github.com/eslint/eslint/issues/2667
+    "lines-around-comment": [2, {"beforeBlockComment": true, "allowBlockStart": true}],
     "linebreak-style": [2, "unix"],
     "max-nested-callbacks": [2, 3],
     "new-cap": 2,
@@ -183,7 +185,9 @@ module.exports = {
     "wrap-regex": 0, // I don't need.
 
     // ECMAScript 6 Section
+    "constructor-super": 2,
     "generator-star-spacing": [2, "after"],
+    "no-this-before-super": 2,
     "no-var": 2,
     "object-shorthand": 2,
     "prefer-const": 2,

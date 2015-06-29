@@ -37,7 +37,9 @@ module.exports = extend(base, {
     "func-names": 0,
 
     // ECMAScript 6 Section
+    "constructor-super": 0,
     "generator-star-spacing": 0,
+    "no-this-before-super": 0,
     "no-var": 0,
     "object-shorthand": 0,
     "prefer-const": 0
