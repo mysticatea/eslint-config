@@ -37,7 +37,7 @@ module.exports = {
     "no-empty-character-class": 2,
     "no-empty": 2,
     "no-ex-assign": 2,
-    "no-extra-boolean-cast": 2,
+    "no-extra-boolean-cast": 2, //TODO: turn off later, use no-implicit-coercion
     "no-extra-parens": [2, "functions"],
     "no-extra-semi": 2,
     "no-func-assign": 2,
@@ -49,7 +49,7 @@ module.exports = {
     "no-regex-spaces": 2,
     "no-reserved-keys": 0, // Allowed on ES5.
     "no-sparse-arrays": 2,
-    "no-unexpected-multiline": 0, // Needless surely.
+    "no-unexpected-multiline": 0, // I prefer semicolons.
     "no-unreachable": 2,
     "use-isnan": 2,
     "valid-jsdoc": [2, {"requireReturn": false}],
@@ -91,7 +91,7 @@ module.exports = {
     "no-octal-escape": 2,
     "no-octal": 2,
     "no-param-reassign": 0, // For overloading patterns.
-    "no-process-env": 0, // I'll use envify.
+    "no-process-env": 0, // I like envify.
     "no-proto": 0, // Allowed on ES6
     "no-redeclare": 2,
     "no-return-assign": 2,
@@ -100,6 +100,7 @@ module.exports = {
     "no-sequences": 2,
     "no-throw-literal": 2,
     "no-unused-expressions": 2,
+    "no-useless-call": 2,
     "no-void": 2,
     "no-warning-comments": 0, // I want to allow if there is author name.
     "no-with": 2,
@@ -112,6 +113,7 @@ module.exports = {
     "strict": [2, "global"],
 
     // Variables Section
+    "init-declarations": 2,
     "no-catch-shadow": 2,
     "no-delete-var": 2,
     "no-label-var": 2,
@@ -124,6 +126,7 @@ module.exports = {
     "no-use-before-define": [2, "nofunc"], // I know hoisting.
 
     // Node.js Section
+    "callback-return": 0,
     "handle-callback-err": 0,
     "no-mixed-requires": 0,
     "no-new-require": 0,
@@ -185,30 +188,25 @@ module.exports = {
     "wrap-regex": 0, // I don't need.
 
     // ECMAScript 6 Section
+    "arrow-parens": 2,
+    "arrow-spacing": 2,
     "constructor-super": 2,
     "generator-star-spacing": [2, "after"],
+    "no-class-assign": 2,
+    "no-const-assign": 2,
     "no-this-before-super": 2,
     "no-var": 2,
     "object-shorthand": 2,
     "prefer-const": 2,
+    "prefer-spread": 2,
+    "require-yield": 2,
 
-    // Deprecated
-    "generator-star": 0,
-    "global-strict": 0,
+    // Legacy
     "max-depth": 0,
     "max-len": 0,
     "max-params": 0,
     "max-statements": 0,
     "no-bitwise": 0,
-    "no-comma-dangle": 0,
-    "no-empty-class": 0,
-    "no-extra-strict": 0,
-    "no-plusplus": 0,
-    "no-space-before-semi": 0,
-    "no-wrap-func": 0,
-    "space-after-function-name": 0,
-    "space-before-function-parentheses": 0,
-    "space-in-brackets": 0,
-    "spaced-line-comment": 0
+    "no-plusplus": 0
   }
 };

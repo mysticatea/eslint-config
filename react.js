@@ -9,12 +9,15 @@ module.exports = extend(base, {
   "rules": {
     "react/display-name": 2,
     "react/jsx-boolean-value": 2,
+    "react/jsx-curly-spacing": 2,
+    "react/jsx-no-duplicate-props": 2,
     "react/jsx-no-undef": 2,
     "react/jsx-quotes": [2, "double", "avoid-escape"],
     "react/jsx-sort-prop-types": 0, // I like to sort by meaning.
     "react/jsx-sort-props": 0, // I like to sort by meaning.
     "react/jsx-uses-react": 2,
     "react/jsx-uses-vars": 2,
+    "react/no-danger": 2,
     "react/no-did-mount-set-state": 2,
     "react/no-did-update-set-state": 2,
     "react/no-multi-comp": 2,

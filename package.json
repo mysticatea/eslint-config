@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-mysticatea",
-  "version": "0.24.0",
+  "version": "1.0.0-rc-1",
   "description": "Shareable configurations of ESLint for me.",
   "main": "base.js",
   "files": [
@@ -18,11 +18,8 @@
     "object-assign": "^3.0.0"
   },
   "devDependencies": {
-    "eslint": "~0.24.0",
-    "eslint-plugin-react": "^2.6.0"
-  },
-  "peerDependencies": {
-    "eslint": "~0.24.0"
+    "eslint": "1.0.0-rc-1",
+    "eslint-plugin-react": "^3.0.0"
   },
   "repository": {
     "type": "git",
