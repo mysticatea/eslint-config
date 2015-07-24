@@ -37,7 +37,7 @@ module.exports = {
     "no-empty-character-class": 2,
     "no-empty": 2,
     "no-ex-assign": 2,
-    "no-extra-boolean-cast": 2, //TODO: turn off later, use no-implicit-coercion
+    "no-extra-boolean-cast": 0, // I use no-implicit-coercion
     "no-extra-parens": [2, "functions"],
     "no-extra-semi": 2,
     "no-func-assign": 2,
@@ -78,6 +78,8 @@ module.exports = {
     "no-fallthrough": 2,
     "no-floating-decimal": 2,
     "no-implied-eval": 2,
+    "no-implicit-coercion": 2,
+    "no-invalid-this": 2,
     "no-iterator": 2,
     "no-labels": 2,
     "no-lone-blocks": 2,
@@ -90,7 +92,7 @@ module.exports = {
     "no-new": 2,
     "no-octal-escape": 2,
     "no-octal": 2,
-    "no-param-reassign": 0, // For overloading patterns.
+    "no-param-reassign": [2, {"props": true}],
     "no-process-env": 0, // I like envify.
     "no-proto": 0, // Allowed on ES6
     "no-redeclare": 2,
@@ -198,6 +200,7 @@ module.exports = {
     "no-var": 2,
     "object-shorthand": 2,
     "prefer-const": 2,
+    "prefer-reflect": 0, // I thought too early.
     "prefer-spread": 2,
     "require-yield": 2,
 
