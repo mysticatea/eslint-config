@@ -5,16 +5,18 @@ Shareable configurations of ESLint for me.
 ## Installation
 
 ```
-npm install -D eslint eslint-config-mysticatea
+npm install --save-dev eslint eslint-plugin-mysticatea eslint-config-mysticatea
 ```
 
 ## Rule Templates
+
+All templates requires `eslint-plugin-mysticatea`.
 
 ### base
 
 ```js
 {
-  "extends": "mysticatea"
+    "extends": "mysticatea"
 }
 ```
 
@@ -22,7 +24,7 @@ npm install -D eslint eslint-config-mysticatea
 
 ```js
 {
-  "extends": "mysticatea/browser"
+    "extends": "mysticatea/browser"
 }
 ```
 
@@ -30,7 +32,7 @@ npm install -D eslint eslint-config-mysticatea
 
 ```js
 {
-  "extends": "mysticatea/nodejs"
+    "extends": "mysticatea/nodejs"
 }
 ```
 
@@ -38,17 +40,17 @@ npm install -D eslint eslint-config-mysticatea
 
 ```js
 {
-  "extends": "mysticatea/react"
+    "extends": "mysticatea/react"
 }
 ```
 
-This rule requires `eslint-plugin-react` also.
+This template requires `eslint-plugin-react` also.
 
 ### es5
 
 ```js
 {
-  "extends": "mysticatea/es5"
+    "extends": "mysticatea/es5"
 }
 ```
 
