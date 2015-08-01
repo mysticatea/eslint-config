@@ -52,7 +52,6 @@ module.exports = {
         "no-negated-in-lhs": 2,
         "no-obj-calls": 2,
         "no-regex-spaces": 2,
-        "no-reserved-keys": 0, // Allowed on ES5.
         "no-sparse-arrays": 2,
         "no-unexpected-multiline": 0, // I prefer semicolons.
         "no-unreachable": 2,
@@ -92,7 +91,7 @@ module.exports = {
         "no-multi-spaces": 2,
         "no-multi-str": 0, // It's supported in ES5 or later.
         "no-native-reassign": 2,
-        "no-new-func": 2,
+        "no-new-func": 0, // Function constructor is different from eval.
         "no-new-wrappers": 2,
         "no-new": 2,
         "no-octal-escape": 2,
@@ -149,10 +148,12 @@ module.exports = {
         "comma-spacing": 2,
         "comma-style": 2,
         "computed-property-spacing": 2,
-        "consistent-this": 0, // Favor AllowFunction or bind(this), and I like more acculate name.
+        "consistent-this": 0, // Favor AllowFunction or bind(this), and I like using more acculate name.
         "eol-last": 2,
         "func-names": 2,
         "func-style": [2, "declaration"],
+        "id-length": 0, // I like one char variables in very small functions or callbacks.
+        "id-match": 0, // To consider each project.
         "indent": [2, 4, {"indentSwitchCase": true}],
         "key-spacing": 2,
         "lines-around-comment": [2, {"beforeBlockComment": true, "allowBlockStart": true}],
