@@ -2,6 +2,11 @@
 
 Shareable configurations of ESLint for me.
 
+Please see [base.js](./base.js) to check rules.
+Basically rules are enabled and rules I wanted to disable are commented in the file.
+
+Note: This module does **not** have semver. This version has been adjusted to ESLint's.
+
 ## Installation
 
 ```
