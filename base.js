@@ -99,7 +99,7 @@ module.exports = {
         "no-param-reassign": [2, {"props": true}],
         "no-process-env": 0, // I like envify.
         "no-proto": 0, // Allowed on ES6
-        "no-redeclare": [2, {builtinGlobals: true}],
+        "no-redeclare": [2, {"builtinGlobals": true}],
         "no-return-assign": 2,
         "no-script-url": 2,
         "no-self-compare": 2,
@@ -154,7 +154,7 @@ module.exports = {
         "func-style": [2, "declaration"],
         "id-length": 0, // I like one char variables in very small functions or callbacks.
         "id-match": 0, // To consider each project.
-        "indent": [2, 4, {"indentSwitchCase": true}],
+        "indent": [2, 4, {"SwitchCase": 1}],
         "key-spacing": 2,
         "lines-around-comment": [2, {"beforeBlockComment": true, "allowBlockStart": true}],
         "linebreak-style": [2, "unix"],
@@ -180,7 +180,7 @@ module.exports = {
         "operator-assignment": 0, // It makes no difference to me.
         "operator-linebreak": 2, // I like it.
         "padded-blocks": [2, "never"],
-        "quote-props": [2, "as-needed"],
+        "quote-props": [2, "consistent-as-needed"],
         "quotes": [2, "double", "avoid-escape"],
         "semi-spacing": 2,
         "semi": 2,
