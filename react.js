@@ -10,7 +10,9 @@ module.exports = extend(base, {
         "react/display-name": 2,
         "react/jsx-boolean-value": 2,
         "react/jsx-curly-spacing": 2,
+        "react/jsx-max-props-per-line": 0,
         "react/jsx-no-duplicate-props": 2,
+        "react/jsx-no-literals": 0,
         "react/jsx-no-undef": 2,
         "react/jsx-quotes": [2, "double", "avoid-escape"],
         "react/jsx-sort-prop-types": 0, // I like to sort by meaning.

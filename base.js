@@ -143,6 +143,7 @@ module.exports = {
 
         // Stylistic Issues Section
         "array-bracket-spacing": 2,
+        "block-spacing": 2,
         "brace-style": [2, "stroustrup", {"allowSingleLine": true}],
         "camelcase": 2,
         "comma-spacing": 2,
@@ -202,12 +203,15 @@ module.exports = {
         "generator-star-spacing": [2, "after"],
         "no-class-assign": 2,
         "no-const-assign": 2,
+        "no-dupe-class-members": 2,
         "no-this-before-super": 2,
         "no-var": 2,
         "object-shorthand": 2,
+        "prefer-arrow-callback": 2,
         "prefer-const": 2,
         "prefer-reflect": 0, // I thought too early.
         "prefer-spread": 2,
+        "prefer-template": 2,
         "require-yield": 2,
 
         // My plugin.
