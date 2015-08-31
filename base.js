@@ -107,6 +107,7 @@ module.exports = {
         "no-throw-literal": 2,
         "no-unused-expressions": 2,
         "no-useless-call": 2,
+        "no-useless-concat": 2,
         "no-void": 2,
         "no-warning-comments": 0, // I want to allow if there is author name.
         "no-with": 2,
@@ -179,7 +180,7 @@ module.exports = {
         "object-curly-spacing": 2,
         "one-var": [2, {"initialized": "never", "uninitialized": "always"}], // I like this.
         "operator-assignment": 0, // It makes no difference to me.
-        "operator-linebreak": 2, // I like it.
+        "operator-linebreak": [2, "after"], // I like it.
         "padded-blocks": [2, "never"],
         "quote-props": [2, "consistent-as-needed"],
         "quotes": [2, "double", "avoid-escape"],
