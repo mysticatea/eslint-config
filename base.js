@@ -183,7 +183,7 @@ module.exports = {
         "object-curly-spacing": 2,
         "one-var": [2, {"initialized": "never", "uninitialized": "always"}], // I like this.
         "operator-assignment": 0, // It makes no difference to me.
-        "operator-linebreak": [2, "after", {"overrides": {"?": "before", ":": "none"}}], // I like it.
+        "operator-linebreak": [2, "after"], // I like it.
         "padded-blocks": [2, "never"],
         "quote-props": [2, "consistent-as-needed"],
         "quotes": [2, "double", "avoid-escape"],
