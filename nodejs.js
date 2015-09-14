@@ -7,6 +7,7 @@ module.exports = extend(base, {
     },
     "rules": {
         "callback-return": 2,
+        "global-require": 0, // I'm using ES6 modules. So if `require()` is needed, it's not global.
         "handle-callback-err": 2,
         "no-mixed-requires": 2,
         "no-new-require": 2,

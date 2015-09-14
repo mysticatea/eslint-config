@@ -68,7 +68,7 @@ module.exports = {
         "default-case": 2,
         "dot-notation": 2,
         "dot-location": [2, "property"],
-        "eqeqeq": 2,
+        "eqeqeq": [2, "allow-null"],
         "guard-for-in": 0, // I like using Object.create(null)
         "no-alert": 2,
         "no-caller": 2,
@@ -134,6 +134,7 @@ module.exports = {
 
         // Node.js Section
         "callback-return": 0,
+        "global-require": 0,
         "handle-callback-err": 0,
         "no-mixed-requires": 0,
         "no-new-require": 0,
@@ -157,6 +158,7 @@ module.exports = {
         "id-length": 0, // I like one char variables in very small functions or callbacks.
         "id-match": 0, // To consider each project.
         "indent": [2, 4, {"SwitchCase": 1}],
+        "jsx-quotes": [2, "prefer-double"],
         "key-spacing": 2,
         "lines-around-comment": [2, {"beforeBlockComment": true, "allowBlockStart": true}],
         "linebreak-style": [2, "unix"],
@@ -172,6 +174,7 @@ module.exports = {
         "no-multiple-empty-lines": 0, // I don't think I need disallow.
         "no-nested-ternary": 0, // I like it if together with line breaks.
         "no-new-object": 2,
+        "no-restricted-syntax": 0,
         "no-spaced-func": 2,
         "no-ternary": 0, // I like it.
         "no-trailing-spaces": 2,
@@ -180,16 +183,18 @@ module.exports = {
         "object-curly-spacing": 2,
         "one-var": [2, {"initialized": "never", "uninitialized": "always"}], // I like this.
         "operator-assignment": 0, // It makes no difference to me.
-        "operator-linebreak": [2, "after"], // I like it.
+        "operator-linebreak": [2, "after", {"overrides": {"?": "before", ":": "none"}}], // I like it.
         "padded-blocks": [2, "never"],
         "quote-props": [2, "consistent-as-needed"],
         "quotes": [2, "double", "avoid-escape"],
+        "require-jsdoc": 0, // temporary.
         "semi-spacing": 2,
         "semi": 2,
         "sort-vars": 0, // I don't need.
         "space-after-keywords": 2,
         "space-before-blocks": 2,
         "space-before-function-paren": [2, "never"],
+        "space-before-keywords": 2,
         "space-in-parens": 2,
         "space-infix-ops": 2,
         "space-return-throw-case": 2,
