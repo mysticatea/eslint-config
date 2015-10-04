@@ -127,7 +127,7 @@ module.exports = {
         "no-shadow-restricted-names": 2,
         "no-shadow": 2,
         "no-undef-init": 2,
-        "no-undef": 2,
+        "no-undef": [2, {"typeof": true}],
         "no-undefined": 0,
         "no-unused-vars": 2,
         "no-use-before-define": [2, "nofunc"], // I know hoisting.
@@ -173,6 +173,7 @@ module.exports = {
         "no-mixed-spaces-and-tabs": 2,
         "no-multiple-empty-lines": 0, // I don't think I need disallow.
         "no-nested-ternary": 0, // I like it if together with line breaks.
+        "no-negated-condition": 0, // Case by case.
         "no-new-object": 2,
         "no-restricted-syntax": 0,
         "no-spaced-func": 2,
