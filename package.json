@@ -15,16 +15,16 @@
     "test": "node lib/check-rules.js"
   },
   "dependencies": {
-    "object-assign": "^3.0.0"
+    "object-assign": "^4.0.1"
   },
   "peerDependencies": {
     "eslint": "*",
     "eslint-plugin-mysticatea": "*"
   },
   "devDependencies": {
-    "eslint": "^1.6.0",
+    "eslint": "^1.7.1",
     "eslint-plugin-mysticatea": "^1.0.2",
-    "eslint-plugin-react": "^3.2.3"
+    "eslint-plugin-react": "^3.5.1"
   },
   "repository": {
     "type": "git",

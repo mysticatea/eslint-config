@@ -46,6 +46,7 @@ module.exports = extend(base, {
         "no-class-assign": 0,
         "no-const-assign": 0,
         "no-dupe-class-members": 0,
+        "no-empty-pattern": 0,
         "no-this-before-super": 0,
         "no-var": 0,
         "object-shorthand": 0,

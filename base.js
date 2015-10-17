@@ -88,6 +88,7 @@ module.exports = {
         "no-labels": 2,
         "no-lone-blocks": 2,
         "no-loop-func": 2,
+        "no-magic-numbers": 0, // Sorry...
         "no-multi-spaces": 2,
         "no-multi-str": 0, // It's supported in ES5 or later.
         "no-native-reassign": 2,
@@ -211,6 +212,7 @@ module.exports = {
         "no-class-assign": 2,
         "no-const-assign": 2,
         "no-dupe-class-members": 2,
+        "no-empty-pattern": 2,
         "no-this-before-super": 2,
         "no-var": 2,
         "object-shorthand": 2,
