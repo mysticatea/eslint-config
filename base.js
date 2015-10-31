@@ -205,10 +205,12 @@ module.exports = {
         "wrap-regex": 0, // I don't need.
 
         // ECMAScript 6 Section
+        "arrow-body-style": 2,
         "arrow-parens": 0, // `mysticatea/arrow-parens` instead.
         "arrow-spacing": 2,
         "constructor-super": 2,
         "generator-star-spacing": [2, "after"],
+        "no-arrow-condition": 0,
         "no-class-assign": 2,
         "no-const-assign": 2,
         "no-dupe-class-members": 2,
