@@ -17,6 +17,7 @@ module.exports = extend(base, {
         "react/jsx-no-duplicate-props": 2,
         "react/jsx-no-literals": 0,
         "react/jsx-no-undef": 2,
+        "react/jsx-quotes": 0, // deprecated.
         "react/jsx-sort-prop-types": 0, // I like to sort by meaning.
         "react/jsx-sort-props": 0, // I like to sort by meaning.
         "react/jsx-uses-react": 2,

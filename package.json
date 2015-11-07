@@ -23,8 +23,8 @@
     "eslint-plugin-mysticatea": "*"
   },
   "devDependencies": {
-    "eslint": "^1.8.0",
-    "eslint-plugin-mysticatea": "^1.0.2",
+    "eslint": "^1.9.0",
+    "eslint-plugin-mysticatea": "^1.0.3",
     "eslint-plugin-react": "^3.5.1"
   },
   "repository": {
