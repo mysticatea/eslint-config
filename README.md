@@ -8,7 +8,7 @@ Basically rules are enabled and rules I wanted to disable are commented in the f
 This config's version is adjusting to ESLint's.
 And the pre-release version shows config's version.
 
-e.g. `1.10.0-1.0.0` is the first version for ESLint `v1.10.x`.
+e.g. `v2.0.0-config-0.1.0` is the first version for ESLint `v2.0.0`.
 
 ## Installation
 
