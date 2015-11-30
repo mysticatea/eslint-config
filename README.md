@@ -5,59 +5,76 @@ Shareable configurations of ESLint for me.
 Please see [base.js](./base.js) to check rules.
 Basically rules are enabled and rules I wanted to disable are commented in the file.
 
-Note: This module does **not** have semver. This version has been adjusted to ESLint's.
+This config's version is adjusting to ESLint's.
+And the pre-release version shows config's version.
+
+e.g. `1.10.0-1.0.0` is the first version for ESLint `v1.10.x`.
 
 ## Installation
 
 ```
-npm install --save-dev eslint eslint-plugin-mysticatea eslint-config-mysticatea
+npm install --save-dev eslint-config-mysticatea
 ```
 
-## Rule Templates
+**Node:** Please use `npm>=3`.
 
-All templates requires `eslint-plugin-mysticatea`.
+## Usage
 
-### base
+First, please choose a base template.
 
-```js
-{
-    "extends": "mysticatea"
-}
-```
+- `mysticatea` - A rule set for ECMAScript 2015 (ES6).
+- `mysticatea/es5` - A rule set for ES5.
 
-### browser
+Second, please choose a optional template and add it.
 
-```js
-{
-    "extends": "mysticatea/browser"
-}
-```
+- `mysticatea/browser` - An additional setting for browser environment.
+- `mysticatea/modules` - An additional setting for ECMAScript 2015 Modules enviroment.
+- `mysticatea/node` - An additional setting for Node.js environment.
+- `mysticatea/react` - An additional setting for React.js environment.
 
-### nodejs
+Then, please write those into `extends` field.
 
-```js
-{
-    "extends": "mysticatea/nodejs"
-}
-```
+### Examples
 
-### react
+- Node.js with ES5
 
-```js
-{
-    "extends": "mysticatea/react"
-}
-```
+  ```json
+  {
+      "extends": ["mysticatea/es5", "mysticatea/node"]
+  }
+  ```
 
-This template requires `eslint-plugin-react` also.
+- Node.js with ES2015
 
-### es5
+  ```json
+  {
+      "extends": ["mysticatea", "mysticatea/node"]
+  }
+  ```
 
-```js
-{
-    "extends": "mysticatea/es5"
-}
-```
+- Node.js with ES2015 & Modules
+
+  ```json
+  {
+      "extends": ["mysticatea", "mysticatea/modules", "mysticatea/node"]
+  }
+  ```
+
+- Browser with ES2015
+
+  ```json
+  {
+      "extends": ["mysticatea", "mysticatea/browser"]
+  }
+  ```
+
+- React.js in browser
+
+  ```json
+  {
+      "extends": ["mysticatea", "mysticatea/browser", "mysticatea/react"]
+  }
+  ```
 
 ## Test
 

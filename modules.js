@@ -6,5 +6,5 @@
 "use strict";
 
 module.exports = {
-    "env": {"browser": true}
+    "ecmaFeatures": {"modules": true}
 };

@@ -1,32 +1,15 @@
+/**
+ * @author Toru Nagashima
+ * @copyright 2015 Toru Nagashima. All rights reserved.
+ * See LICENSE file in root directory for full license.
+ */
+"use strict";
+
 var extend = require("./lib/extend");
 var base = require("./base");
 
 module.exports = extend(base, {
-    "ecmaFeatures": {
-        "arrowFunctions": false,
-        "binaryLiterals": false,
-        "blockBindings": false,
-        "classes": false,
-        "defaultParams": false,
-        "destructuring": false,
-        "forOf": false,
-        "generators": false,
-        "modules": false,
-        "newTarget": false,
-        "objectLiteralComputedProperties": false,
-        "objectLiteralDuplicateProperties": false,
-        "objectLiteralShorthandMethods": false,
-        "objectLiteralShorthandProperties": false,
-        "octalLiterals": false,
-        "regexUFlag": false,
-        "regexYFlag": false,
-        "restParams": false,
-        "spread": false,
-        "superInFunctions": false,
-        "templateStrings": false,
-        "unicodeCodePointEscapes": false
-    },
-
+    "plugins": ["mysticatea"],
     "rules": {
         // Possible Errors Section
         "no-inner-declarations": [2, "functions"], // syntax-error in ES5
@@ -60,7 +43,6 @@ module.exports = extend(base, {
         "require-yield": 0,
 
         // My plugin.
-        "mysticatea/arrow-parens": 0,
-        "mysticatea/block-scoped-var": 2,
+        "mysticatea/block-scoped-var": 2
     }
 });

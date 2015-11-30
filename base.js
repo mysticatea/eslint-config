@@ -1,33 +1,11 @@
+/**
+ * @author Toru Nagashima
+ * @copyright 2015 Toru Nagashima. All rights reserved.
+ * See LICENSE file in root directory for full license.
+ */
+"use strict";
+
 module.exports = {
-    "plugins": [
-        "mysticatea"
-    ],
-
-    "ecmaFeatures": {
-        "arrowFunctions": true,
-        "binaryLiterals": true,
-        "blockBindings": true,
-        "classes": true,
-        "defaultParams": true,
-        "destructuring": true,
-        "forOf": true,
-        "generators": true,
-        "modules": true,
-        "newTarget": true,
-        "objectLiteralComputedProperties": true,
-        "objectLiteralDuplicateProperties": true,
-        "objectLiteralShorthandMethods": true,
-        "objectLiteralShorthandProperties": true,
-        "octalLiterals": true,
-        "regexUFlag": true,
-        "regexYFlag": true,
-        "restParams": true,
-        "spread": true,
-        "superInFunctions": false,
-        "templateStrings": true,
-        "unicodeCodePointEscapes": true
-    },
-
     "rules": {
         // Possible Errors Section
         "comma-dangle": 2,
@@ -89,7 +67,7 @@ module.exports = {
         "no-labels": 2,
         "no-lone-blocks": 2,
         "no-loop-func": 2,
-        "no-magic-numbers": 0, // Sorry...
+        "no-magic-numbers": 0, // Hmmm
         "no-multi-spaces": 2,
         "no-multi-str": 0, // It's supported in ES5 or later.
         "no-native-reassign": 2,
@@ -99,7 +77,6 @@ module.exports = {
         "no-octal-escape": 2,
         "no-octal": 2,
         "no-param-reassign": [2, {"props": true}],
-        "no-process-env": 0, // I like envify.
         "no-proto": 0, // Allowed on ES6
         "no-redeclare": [2, {"builtinGlobals": true}],
         "no-return-assign": 2,
@@ -141,6 +118,7 @@ module.exports = {
         "no-mixed-requires": 0,
         "no-new-require": 0,
         "no-path-concat": 0,
+        "no-process-env": 0,
         "no-process-exit": 0,
         "no-restricted-modules": 0,
         "no-sync": 0,
@@ -171,7 +149,7 @@ module.exports = {
         "no-array-constructor": 2,
         "no-continue": 0, // I like it.
         "no-inline-comments": 0, // I don't think I need disallow.
-        "no-lonely-if": 0, // I like it.
+        "no-lonely-if": 2,
         "no-mixed-spaces-and-tabs": 2,
         "no-multiple-empty-lines": 0, // I don't think I need disallow.
         "no-nested-ternary": 0, // I like it if together with line breaks.
@@ -190,7 +168,7 @@ module.exports = {
         "padded-blocks": [2, "never"],
         "quote-props": [2, "consistent-as-needed"],
         "quotes": [2, "double", "avoid-escape"],
-        "require-jsdoc": 0, // temporary.
+        "require-jsdoc": 2,
         "semi-spacing": 2,
         "semi": 2,
         "sort-vars": 0, // I don't need.
@@ -207,7 +185,7 @@ module.exports = {
 
         // ECMAScript 6 Section
         "arrow-body-style": 2,
-        "arrow-parens": 0, // `mysticatea/arrow-parens` instead.
+        "arrow-parens": 2,
         "arrow-spacing": 2,
         "constructor-super": 2,
         "generator-star-spacing": [2, "after"],
@@ -227,7 +205,7 @@ module.exports = {
         "require-yield": 2,
 
         // My plugin.
-        "mysticatea/arrow-parens": 2,
+        "mysticatea/arrow-parens": 0,
         "mysticatea/block-scoped-var": 0, // Use let/const.
 
         // Legacy
