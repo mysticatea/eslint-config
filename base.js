@@ -185,7 +185,7 @@ module.exports = {
 
         // ECMAScript 6 Section
         "arrow-body-style": 2,
-        "arrow-parens": 2,
+        "arrow-parens": [2, "as-needed"],
         "arrow-spacing": 2,
         "constructor-super": 2,
         "generator-star-spacing": [2, "after"],
