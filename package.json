@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-mysticatea",
-  "version": "2.0.0-config-0.1.0",
+  "version": "2.0.0-config-0.1.1",
   "description": "Shareable configurations of ESLint for me.",
   "main": "es2015.js",
   "files": [
@@ -9,7 +9,7 @@
     "browser.js",
     "es2015.js",
     "es5.js",
-    "nodejs.js",
+    "node.js",
     "react.js"
   ],
   "scripts": {
@@ -24,7 +24,6 @@
     "eslint-plugin-react": "^3.11.1",
     "object-assign": "^4.0.1"
   },
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mysticatea/eslint-config.git"
