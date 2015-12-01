@@ -16,7 +16,7 @@ e.g. `v2.0.0-config-1.0.0` is the first version for ESLint `v2.0.0`.
 npm install --save-dev eslint-config-mysticatea
 ```
 
-**Node:** Please use `npm>=3`.
+**Note:** Please use `npm>=3`.
 
 ## Usage
 
