@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-mysticatea",
-  "version": "2.0.0-config-0.2.1",
+  "version": "2.0.0-config-0.2.2",
   "description": "Shareable configurations of ESLint for me.",
   "main": "es2015.js",
   "files": [
@@ -18,12 +18,17 @@
     "postversion": "git push && git push --tags",
     "test": "cd lib && node check-rules.js"
   },
+  "peerDependencies": {
+    "eslint": ">=1.0.0"
+  },
   "dependencies": {
-    "eslint": "^1.10.2",
     "eslint-plugin-mysticatea": "^1.0.3",
     "eslint-plugin-node": "^0.2.0",
     "eslint-plugin-react": "^3.11.1",
     "object-assign": "^4.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^1.10.3"
   },
   "repository": {
     "type": "git",

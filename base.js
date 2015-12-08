@@ -6,6 +6,7 @@
 "use strict";
 
 module.exports = {
+    "plugins": ["mysticatea"],
     "rules": {
         // Possible Errors Section
         "comma-dangle": 2,

@@ -9,7 +9,6 @@ var extend = require("./lib/extend");
 var base = require("./base");
 
 module.exports = extend(base, {
-    "plugins": ["mysticatea"],
     "rules": {
         // Possible Errors Section
         "no-inner-declarations": [2, "functions"], // syntax-error in ES5
@@ -43,6 +42,7 @@ module.exports = extend(base, {
         "require-yield": 0,
 
         // My plugin.
+        "mysticatea/arrow-parens": 0,
         "mysticatea/block-scoped-var": 2
     }
 });
