@@ -185,7 +185,7 @@ module.exports = {
 
         // ECMAScript 6 Section
         "arrow-body-style": 2,
-        "arrow-parens": [2, "as-needed"],
+        "arrow-parens": 0, // mysticatea/arrow-parens instead.
         "arrow-spacing": 2,
         "constructor-super": 2,
         "generator-star-spacing": [2, "after"],
@@ -205,7 +205,7 @@ module.exports = {
         "require-yield": 2,
 
         // My plugin.
-        "mysticatea/arrow-parens": 0,
+        "mysticatea/arrow-parens": 2,
         "mysticatea/block-scoped-var": 0, // Use let/const.
 
         // Legacy
