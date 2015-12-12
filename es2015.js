@@ -5,7 +5,9 @@
  */
 "use strict";
 
-module.exports = {
-    "extends": ["./base.js"],
+var extend = require("./lib/extend");
+var base = require("./base");
+
+module.exports = extend(base, {
     "env": {"es6": true}
-};
+});

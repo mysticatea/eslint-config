@@ -1,9 +1,10 @@
 {
   "name": "eslint-config-mysticatea",
-  "version": "2.0.0-config-0.3.0",
+  "version": "2.0.0-config-0.3.1",
   "description": "Shareable configurations of ESLint for me.",
   "main": "es2015.js",
   "files": [
+    "lib/extend.js",
     "base.js",
     "browser.js",
     "es2015.js",

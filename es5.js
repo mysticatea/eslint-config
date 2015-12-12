@@ -5,8 +5,10 @@
  */
 "use strict";
 
-module.exports = {
-    "extends": ["./base.js"],
+var extend = require("./lib/extend");
+var base = require("./base");
+
+module.exports = extend(base, {
     "rules": {
         // Possible Errors Section
         "no-inner-declarations": [2, "functions"], // syntax-error in ES5
@@ -41,4 +43,4 @@ module.exports = {
         "mysticatea/arrow-parens": 0,
         "mysticatea/block-scoped-var": 2
     }
-};
+});
