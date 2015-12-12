@@ -5,10 +5,8 @@
  */
 "use strict";
 
-var extend = require("./lib/extend");
-var base = require("./base");
-
-module.exports = extend(base, {
+module.exports = {
+    "extends": ["./base.js"],
     "rules": {
         // Possible Errors Section
         "no-inner-declarations": [2, "functions"], // syntax-error in ES5
@@ -16,9 +14,6 @@ module.exports = extend(base, {
         // Best Practices Section
         "no-proto": 2,
         "no-redeclare": 0, // `mysticatea/block-scoped-var` instead.
-
-        // Stylistic Issues Section
-        "func-names": 0,
 
         // ECMAScript 6 Section
         "arrow-body-style": 0,
@@ -37,6 +32,7 @@ module.exports = extend(base, {
         "prefer-arrow-callback": 0,
         "prefer-const": 0,
         "prefer-reflect": 0,
+        "prefer-rest-params": 0,
         "prefer-spread": 0,
         "prefer-template": 0,
         "require-yield": 0,
@@ -45,4 +41,4 @@ module.exports = extend(base, {
         "mysticatea/arrow-parens": 0,
         "mysticatea/block-scoped-var": 2
     }
-});
+};

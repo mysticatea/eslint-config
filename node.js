@@ -5,9 +5,21 @@
  */
 "use strict";
 
+var assign = require("object-assign");
+var globals = assign({}, require("globals").node);
+
+delete globals.arguments;
+delete globals.Buffer;
+delete globals.GLOBAL;
+delete globals.global;
+delete globals.root;
+
 module.exports = {
+    "parserOptions": {
+        "ecmaFeatures": {"globalReturn": true}
+    },
     "plugins": ["node"],
-    "env": {"node": true},
+    "globals": globals,
     "rules": {
         "callback-return": 0,
         "global-require": 0,

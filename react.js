@@ -7,7 +7,7 @@
 
 module.exports = {
     "plugins": ["react"],
-    "ecmaFeatures": {"jsx": true},
+    "parserOptions": {"ecmaFeatures": {"jsx": true}},
     "rules": {
         "react/display-name": 2,
         "react/forbid-prop-types": 2,

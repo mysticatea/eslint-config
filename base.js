@@ -40,6 +40,7 @@ module.exports = {
 
         // Best Practices Section
         "accessor-pairs": 2,
+        "array-callback-return": 2,
         "block-scoped-var": 0, // Use let/const.
         "complexity": [1, 8],
         "consistent-return": 2,
@@ -63,6 +64,7 @@ module.exports = {
         "no-floating-decimal": 2,
         "no-implied-eval": 2,
         "no-implicit-coercion": 2,
+        "no-implicit-globals": 2,
         "no-invalid-this": 2,
         "no-iterator": 2,
         "no-labels": 2,
@@ -134,14 +136,14 @@ module.exports = {
         "computed-property-spacing": 2,
         "consistent-this": 0, // Favor AllowFunction or bind(this), and I like using more acculate name.
         "eol-last": 2,
-        "func-names": 2,
+        "func-names": 0,
         "func-style": [2, "declaration"],
         "id-length": 0, // I like one char variables in very small functions or callbacks.
         "id-match": 0, // To consider each project.
         "indent": [2, 4, {"SwitchCase": 1}],
         "jsx-quotes": [2, "prefer-double"],
         "key-spacing": 2,
-        "lines-around-comment": [2, {"beforeBlockComment": true, "allowBlockStart": true}],
+        "lines-around-comment": 0,
         "linebreak-style": [2, "unix"],
         "max-nested-callbacks": [2, 3],
         "new-cap": 2,
@@ -156,6 +158,7 @@ module.exports = {
         "no-nested-ternary": 0, // I like it if together with line breaks.
         "no-negated-condition": 0, // Case by case.
         "no-new-object": 2,
+        "no-restricted-imports": 0,
         "no-restricted-syntax": 0,
         "no-spaced-func": 2,
         "no-ternary": 0, // I like it.
@@ -201,9 +204,11 @@ module.exports = {
         "prefer-arrow-callback": 2,
         "prefer-const": 2,
         "prefer-reflect": 0, // I thought too early.
+        "prefer-rest-params": 2,
         "prefer-spread": 2,
         "prefer-template": 2,
         "require-yield": 2,
+        "yield-star-spacing": [2, "after"],
 
         // My plugin.
         "mysticatea/arrow-parens": 2,
