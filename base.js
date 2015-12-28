@@ -87,6 +87,7 @@ module.exports = {
         "no-self-compare": 2,
         "no-sequences": 2,
         "no-throw-literal": 2,
+        "no-unmodified-loop-condition": 2,
         "no-unused-expressions": 2,
         "no-useless-call": 2,
         "no-useless-concat": 2,
@@ -163,7 +164,7 @@ module.exports = {
         "no-spaced-func": 2,
         "no-ternary": 0, // I like it.
         "no-trailing-spaces": 2,
-        "no-underscore-dangle": 0, // It often is used for private members.
+        "no-underscore-dangle": [2, {"allowAfterThis": true}],
         "no-unneeded-ternary": 2,
         "object-curly-spacing": 2,
         "one-var": [2, {"initialized": "never", "uninitialized": "always"}], // I like this.
@@ -195,6 +196,7 @@ module.exports = {
         "generator-star-spacing": [2, "after"],
         "no-arrow-condition": 0,
         "no-class-assign": 2,
+        "no-confusing-arrow": 0,
         "no-const-assign": 2,
         "no-dupe-class-members": 2,
         "no-empty-pattern": 2,
