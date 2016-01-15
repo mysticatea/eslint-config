@@ -144,6 +144,7 @@ module.exports = {
         "indent": [2, 4, {"SwitchCase": 1}],
         "jsx-quotes": [2, "prefer-double"],
         "key-spacing": 2,
+        "keyword-spacing": 2,
         "lines-around-comment": 0,
         "linebreak-style": [2, "unix"],
         "max-nested-callbacks": [2, 3],
@@ -166,6 +167,7 @@ module.exports = {
         "no-trailing-spaces": 2,
         "no-underscore-dangle": [2, {"allowAfterThis": true}],
         "no-unneeded-ternary": 2,
+        "no-whitespace-before-property": 2,
         "object-curly-spacing": 2,
         "one-var": [2, {"initialized": "never", "uninitialized": "always"}], // I like this.
         "operator-assignment": 0, // It makes no difference to me.
@@ -177,13 +179,10 @@ module.exports = {
         "semi-spacing": 2,
         "semi": 2,
         "sort-vars": 0, // I don't need.
-        "space-after-keywords": 2,
         "space-before-blocks": 2,
         "space-before-function-paren": [2, "never"],
-        "space-before-keywords": 2,
         "space-in-parens": 2,
         "space-infix-ops": 2,
-        "space-return-throw-case": 2,
         "space-unary-ops": 2,
         "spaced-comment": [2, "always", {"exceptions": ["-", "="]}],
         "wrap-regex": 0, // I don't need.
@@ -194,13 +193,14 @@ module.exports = {
         "arrow-spacing": 2,
         "constructor-super": 2,
         "generator-star-spacing": [2, "after"],
-        "no-arrow-condition": 0,
         "no-class-assign": 2,
         "no-confusing-arrow": 0,
         "no-const-assign": 2,
         "no-dupe-class-members": 2,
         "no-empty-pattern": 2,
+        "no-new-symbol": 2,
         "no-this-before-super": 2,
+        "no-useless-constructor": 2,
         "no-var": 2,
         "object-shorthand": 2,
         "prefer-arrow-callback": 2,
@@ -210,6 +210,7 @@ module.exports = {
         "prefer-spread": 2,
         "prefer-template": 2,
         "require-yield": 2,
+        "sort-imports": 0,
         "yield-star-spacing": [2, "after"],
 
         // My plugin.
@@ -222,6 +223,12 @@ module.exports = {
         "max-params": 0,
         "max-statements": 0,
         "no-bitwise": 0,
-        "no-plusplus": 0
+        "no-plusplus": 0,
+
+        // Deprecated
+        "no-arrow-condition": 0,
+        "space-after-keywords": 0,
+        "space-before-keywords": 0,
+        "space-return-throw-case": 0
     }
 };
