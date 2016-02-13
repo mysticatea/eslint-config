@@ -18,7 +18,19 @@ module.exports = extend(base, {
         "no-redeclare": 0, // `mysticatea/block-scoped-var` instead.
 
         // ECMAScript 6 Section
+        "arrow-body-style": 0,
+        "arrow-parens": 0,
+        "arrow-spacing": 0,
+        "constructor-super": 0,
+        "generator-star-spacing": 0,
+        "no-class-assign": 0,
+        "no-confusing-arrow": 0,
+        "no-const-assign": 0,
+        "no-dupe-class-members": 0,
+        "no-new-symbol": 0,
+        "no-this-before-super": 0,
         "no-var": 0,
+        "no-useless-constructor": 0,
         "object-shorthand": 0,
         "prefer-arrow-callback": 0,
         "prefer-const": 0,
@@ -26,6 +38,9 @@ module.exports = extend(base, {
         "prefer-rest-params": 0,
         "prefer-spread": 0,
         "prefer-template": 0,
+        "require-yield": 0,
+        "template-curly-spacing": 0,
+        "yield-star-spacing": 0,
 
         // My plugin.
         "mysticatea/arrow-parens": 0,

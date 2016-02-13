@@ -21,17 +21,6 @@ module.exports = {
     "plugins": ["node"],
     "globals": globals,
     "rules": {
-        "callback-return": 0,
-        "global-require": 0,
-        "handle-callback-err": 2,
-        "no-mixed-requires": 2,
-        "no-new-require": 2,
-        "no-path-concat": 2,
-        "no-process-env": 2,
-        "no-process-exit": 2,
-        "no-restricted-modules": 0,
-        "no-sync": 0,
-
         "node/no-missing-import": 2,
         "node/no-missing-require": 2,
         "node/no-unpublished-import": 2,
