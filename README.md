@@ -2,13 +2,7 @@
 
 Shareable configurations of ESLint for me.
 
-Please see [base.js](./base.js) to check rules.
-Basically rules are enabled and rules I wanted to disable are commented in the file.
-
-This config's version is adjusting to ESLint's.
-And the pre-release version shows config's version.
-
-e.g. `v2.0.0-config-1.0.0` is the first version for ESLint `v2.0.0`.
+There is basic configuration at [base.js](./base.js).
 
 ## Installation
 
