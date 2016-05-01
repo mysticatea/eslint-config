@@ -1,7 +1,6 @@
 {
     "extends": ["./es5.js", "./node.js"],
     "rules": {
-        "quote-props": [2, "always"],
-        "no-param-reassign": [2, {"props": false}]
+        "quote-props": [2, "always"]
     }
 }

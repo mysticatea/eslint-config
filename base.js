@@ -14,7 +14,7 @@ module.exports = {
         "arrow-body-style": 2,
         "arrow-spacing": 2,
         "block-spacing": 2,
-        "brace-style": [2, "stroustrup", {"allowSingleLine": true}],
+        "brace-style": [2, "stroustrup", {"allowSingleLine": false}],
         "camelcase": 2,
         "comma-dangle": 2,
         "comma-spacing": 2,
@@ -36,7 +36,8 @@ module.exports = {
         "key-spacing": 2,
         "keyword-spacing": 2,
         "linebreak-style": [2, "unix"],
-        "max-nested-callbacks": [2, 3],
+        "max-nested-callbacks": [2, {"max": 3}],
+        "max-statements-per-line": [2, {"max": 1}],
         "new-cap": 2,
         "new-parens": 2,
         "no-alert": 2,
@@ -57,10 +58,11 @@ module.exports = {
         "no-dupe-class-members": 2,
         "no-dupe-keys": 2,
         "no-duplicate-case": 2,
+        "no-duplicate-imports": [2, {"includeExports": true}],
         "no-else-return": 2,
         "no-empty": 2,
         "no-empty-character-class": 2,
-        "no-empty-function": 0, // TODO: https://github.com/eslint/eslint/issues/5227
+        "no-empty-function": 2,
         "no-empty-pattern": 2,
         "no-eval": 2,
         "no-ex-assign": 2,
@@ -97,7 +99,7 @@ module.exports = {
         "no-obj-calls": 2,
         "no-octal": 2,
         "no-octal-escape": 2,
-        "no-param-reassign": [2, {"props": true}],
+        "no-param-reassign": [2, {"props": false}],
         "no-process-env": 2,
         "no-process-exit": 2,
         "no-redeclare": [2, {"builtinGlobals": true}],
@@ -107,7 +109,7 @@ module.exports = {
         "no-self-assign": 2,
         "no-self-compare": 2,
         "no-sequences": 2,
-        "no-shadow": 2,
+        "no-shadow": [2, {"builtinGlobals": true}],
         "no-shadow-restricted-names": 2,
         "no-spaced-func": 2,
         "no-sparse-arrays": 2,
@@ -116,16 +118,22 @@ module.exports = {
         "no-trailing-spaces": 2,
         "no-undef": [2, {"typeof": true}],
         "no-undef-init": 2,
-        "no-underscore-dangle": [2, {"allowAfterThis": true}],
         "no-unexpected-multiline": 2,
         "no-unmodified-loop-condition": 2,
         "no-unneeded-ternary": 2,
         "no-unreachable": 2,
+        "no-unsafe-finally": 2,
         "no-unused-expressions": 2,
         "no-unused-labels": 2,
-        "no-unused-vars": 2,
+        "no-unused-vars": [2, {
+            "caughtErrors": "all",
+            "varsIgnorePattern": "^_[a-zA-Z]+$",
+            "argsIgnorePattern": "^_[a-zA-Z]+$"
+        }],
         "no-use-before-define": [2, "nofunc"],
         "no-useless-call": 2,
+        "no-useless-escape": 2,
+        "no-useless-computed-key": 2,
         "no-useless-concat": 2,
         "no-useless-constructor": 2,
         "no-var": 2,
@@ -143,9 +151,15 @@ module.exports = {
         "prefer-spread": 2,
         "prefer-template": 2,
         "quote-props": [2, "consistent-as-needed"],
-        "quotes": [2, "double", "avoid-escape"],
+        "quotes": [2, "double"],
         "radix": 2,
-        "require-jsdoc": 2,
+        "require-jsdoc": [2, {
+            "require": {
+                "FunctionDeclaration": true,
+                "MethodDefinition": true,
+                "ClassDeclaration": true
+            }
+        }],
         "require-yield": 2,
         "semi": 2,
         "semi-spacing": 2,
@@ -154,7 +168,17 @@ module.exports = {
         "space-in-parens": 2,
         "space-infix-ops": 2,
         "space-unary-ops": 2,
-        "spaced-comment": [2, "always", {"exceptions": ["-", "="]}],
+        "spaced-comment": [2, "always", {
+            "exceptions": ["-", "="],
+            "markers": [
+                "eslint",
+                "eslint-env",
+                "eslint-disable",
+                "eslint-enable",
+                "eslint-diable-line",
+                "eslint-disable-next-line"
+            ]
+        }],
         "strict": [2, "global"],
         "template-curly-spacing": 2,
         "use-isnan": 2,
@@ -177,8 +201,8 @@ module.exports = {
         "yield-star-spacing": [2, "after"],
         "yoda": [2, "never", {"exceptRange": true}],
 
-        "complexity": [1, 12],
-        "max-params": [1, 6],
+        "complexity": [1, {"max": 12}],
+        "max-params": [1, {"max": 6}],
 
         "arrow-parens": 0,                  // Use "mysticatea/arrow-parens"
         "block-scoped-var": 0,              // Use "mysticatea/block-scoped-var"
@@ -196,6 +220,7 @@ module.exports = {
         "max-len": 0,                       //
         "max-statements": 0,                //
         "newline-after-var": 0,             // Case by case.
+        "newline-before-return": 0,         // Case by case.
         "newline-per-chained-call": 0,      // Case by case.
         "no-bitwise": 0,                    // I'm familiar with bitwise ops.
         "no-confusing-arrow": 0,            // This is very noisy.
@@ -213,12 +238,14 @@ module.exports = {
         "no-path-concat": 0,                // Under consideration...
         "no-plusplus": 0,                   // I often use it.
         "no-proto": 0,                      // This is allowed on ES6+
+        "no-restricted-globals": 0,         //
         "no-restricted-imports": 0,         //
         "no-restricted-modules": 0,         //
         "no-restricted-syntax": 0,          //
         "no-sync": 0,                       // This is useful on CLI tools.
         "no-ternary": 0,                    // I like it.
         "no-undefined": 0,                  // This is safe on strict mode.
+        "no-underscore-dangle": 0,          // Use for private.
         "no-warning-comments": 0,           //
         "one-var-declaration-per-line": 0,  // Use one-var
         "operator-assignment": 0,           //

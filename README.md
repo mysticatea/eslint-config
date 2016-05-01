@@ -44,6 +44,8 @@ Then, please write those into `extends` field.
   }
   ```
 
+  In this case, `engines` field of `package.json` is needed to specify the version of Node.
+
 - Node.js with ES2015 & Modules
 
   ```json
@@ -51,6 +53,9 @@ Then, please write those into `extends` field.
       "extends": ["mysticatea", "mysticatea/modules", "mysticatea/node"]
   }
   ```
+
+  In this case, `engines` field of `package.json` is needed to specify the version of Node.
+  Or just turn `node/no-unsupported-features` off.
 
 - Browser with ES2015
 
@@ -67,6 +72,8 @@ Then, please write those into `extends` field.
       "extends": ["mysticatea", "mysticatea/browser", "mysticatea/react"]
   }
   ```
+
+  This configuration is incomplete.
 
 ## Test
 
