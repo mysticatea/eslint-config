@@ -10,8 +10,7 @@
     "es2015.js",
     "es5.js",
     "modules.js",
-    "node.js",
-    "react.js"
+    "node.js"
   ],
   "scripts": {
     "preversion": "npm test",
@@ -24,20 +23,18 @@
     "npm": "^2.0.0 || ^3.0.0"
   },
   "peerDependencies": {
-    "eslint": "^2.9.0",
+    "eslint": "^2.10.2",
     "eslint-plugin-mysticatea": "^1.0.3",
-    "eslint-plugin-node": "^1.0.0",
-    "eslint-plugin-react": "^3.16.1"
+    "eslint-plugin-node": "^1.4.0"
   },
   "dependencies": {
     "eslint-plugin-mysticatea": "^1.0.3",
-    "eslint-plugin-node": "^1.0.0",
-    "eslint-plugin-react": "^3.16.1",
+    "eslint-plugin-node": "^1.4.0",
     "globals": "^9.0.0",
     "object-assign": "^4.0.1"
   },
   "devDependencies": {
-    "eslint": "^2.9.0"
+    "eslint": "^2.10.2"
   },
   "repository": {
     "type": "git",

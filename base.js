@@ -36,7 +36,6 @@ module.exports = {
         "key-spacing": 2,
         "keyword-spacing": 2,
         "linebreak-style": [2, "unix"],
-        "max-nested-callbacks": [2, {"max": 3}],
         "max-statements-per-line": [2, {"max": 1}],
         "new-cap": 2,
         "new-parens": 2,
@@ -175,8 +174,9 @@ module.exports = {
                 "eslint-env",
                 "eslint-disable",
                 "eslint-enable",
-                "eslint-diable-line",
-                "eslint-disable-next-line"
+                "eslint-disable-line",
+                "eslint-disable-next-line",
+                "istanbul"
             ]
         }],
         "strict": [2, "global"],
@@ -202,7 +202,8 @@ module.exports = {
         "yoda": [2, "never", {"exceptRange": true}],
 
         "complexity": [1, {"max": 12}],
-        "max-params": [1, {"max": 6}],
+        "max-nested-callbacks": [1, {"max": 4}],
+        "max-params": [1, {"max": 8}],
 
         "arrow-parens": 0,                  // Use "mysticatea/arrow-parens"
         "block-scoped-var": 0,              // Use "mysticatea/block-scoped-var"
@@ -247,6 +248,7 @@ module.exports = {
         "no-undefined": 0,                  // This is safe on strict mode.
         "no-underscore-dangle": 0,          // Use for private.
         "no-warning-comments": 0,           //
+        "object-property-newline": 0,       //
         "one-var-declaration-per-line": 0,  // Use one-var
         "operator-assignment": 0,           //
         "prefer-reflect": 0,                // Too early, IMO

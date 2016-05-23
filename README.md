@@ -22,7 +22,6 @@ Second, please choose a optional template and add it.
 - `mysticatea/browser` - An additional setting for browser environment.
 - `mysticatea/modules` - An additional setting for ECMAScript 2015 Modules enviroment.
 - `mysticatea/node` - An additional setting for Node.js environment.
-- `mysticatea/react` - An additional setting for React.js environment.
 
 Then, please write those into `extends` field.
 
@@ -64,16 +63,6 @@ Then, please write those into `extends` field.
       "extends": ["mysticatea", "mysticatea/browser"]
   }
   ```
-
-- React.js in browser
-
-  ```json
-  {
-      "extends": ["mysticatea", "mysticatea/browser", "mysticatea/react"]
-  }
-  ```
-
-  This configuration is incomplete.
 
 ## Test
 
