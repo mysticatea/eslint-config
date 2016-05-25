@@ -5,8 +5,8 @@
  */
 "use strict";
 
-var assign = require("object-assign");
-var globals = assign({}, require("globals").browser);
+var originalGlobals = require("globals").browser;
+var globals = {};
 var allows = [
     "atob",
     "btoa",
@@ -26,9 +26,9 @@ var allows = [
     "window"
 ];
 
-Object.keys(globals).forEach(function(key) {
-    if (key[0] === key[0].toLowerCase() && allows.indexOf(key) === -1) {
-        delete globals[key];
+Object.keys(originalGlobals).forEach(function(key) {
+    if (key[0] === key[0].toUpperCase() || allows.indexOf(key) !== -1) {
+        globals[key] = originalGlobals[key];
     }
 });
 
