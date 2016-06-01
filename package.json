@@ -4,19 +4,19 @@
   "description": "Shareable configurations of ESLint for me.",
   "main": "es2015.js",
   "files": [
-    "lib/extend.js",
     "base.js",
     "browser.js",
     "es2015.js",
     "es5.js",
+    "mocha.js",
     "modules.js",
     "node.js"
   ],
   "scripts": {
     "preversion": "npm test",
     "postversion": "git push && git push --tags",
-    "pretest": "eslint lib \"*.js\"",
-    "test": "cd lib && node check-rules.js"
+    "pretest": "eslint .",
+    "test": "cd test && mocha rules.js --reporter progress"
   },
   "engines": {
     "node": "^0.10.0 || ^0.12.0 || ^4.0.0 || ^6.0.0",
@@ -34,7 +34,7 @@
   },
   "devDependencies": {
     "eslint": "^2.10.2",
-    "object-assign": "^4.0.1"
+    "mocha": "^2.5.3"
   },
   "repository": {
     "type": "git",
