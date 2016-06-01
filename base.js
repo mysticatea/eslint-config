@@ -3,7 +3,7 @@
  * @copyright 2015 Toru Nagashima. All rights reserved.
  * See LICENSE file in root directory for full license.
  */
-"use strict";
+"use strict"
 
 module.exports = {
     "plugins": ["mysticatea"],
@@ -16,7 +16,7 @@ module.exports = {
         "block-spacing": "error",
         "brace-style": ["error", "stroustrup", {"allowSingleLine": false}],
         "camelcase": "error",
-        "comma-dangle": "error",
+        "comma-dangle": ["error", "always-multiline"],
         "comma-spacing": "error",
         "comma-style": "error",
         "computed-property-spacing": "error",
@@ -78,7 +78,12 @@ module.exports = {
         "no-implied-eval": "error",
         "no-invalid-regexp": "error",
         "no-invalid-this": "error",
-        "no-irregular-whitespace": "error",
+        "no-irregular-whitespace": ["error", {
+            "skipStrings": false,
+            "skipComments": false,
+            "skipRegExps": false,
+            "skipTemplates": false,
+        }],
         "no-iterator": "error",
         "no-label-var": "error",
         "no-lone-blocks": "error",
@@ -126,7 +131,7 @@ module.exports = {
         "no-unused-vars": ["error", {
             "caughtErrors": "all",
             "varsIgnorePattern": "^_[a-zA-Z]+$",
-            "argsIgnorePattern": "^_[a-zA-Z]+$"
+            "argsIgnorePattern": "^_[a-zA-Z]+$",
         }],
         "no-use-before-define": ["error", "nofunc"],
         "no-useless-call": "error",
@@ -155,11 +160,11 @@ module.exports = {
             "require": {
                 "FunctionDeclaration": true,
                 "MethodDefinition": true,
-                "ClassDeclaration": true
-            }
+                "ClassDeclaration": true,
+            },
         }],
         "require-yield": "error",
-        "semi": "error",
+        "semi": ["error", "never"],
         "semi-spacing": "error",
         "space-before-blocks": "error",
         "space-before-function-paren": ["error", "never"],
@@ -175,8 +180,10 @@ module.exports = {
                 "eslint-enable",
                 "eslint-disable-line",
                 "eslint-disable-next-line",
-                "istanbul"
-            ]
+                "exported",
+                "globals",
+                "istanbul",
+            ],
         }],
         "strict": ["error", "global"],
         "template-curly-spacing": "error",
@@ -184,7 +191,7 @@ module.exports = {
         "valid-jsdoc": ["error", {
             "requireReturn": true,
             "prefer": {
-                "return": "returns"
+                "return": "returns",
             },
             "preferType": {
                 "Boolean": "boolean",
@@ -192,8 +199,8 @@ module.exports = {
                 "String": "string",
                 "Object": "object",
                 "Symbol": "symbol",
-                "Function": "function"
-            }
+                "Function": "function",
+            },
         }],
         "valid-typeof": "error",
         "wrap-iife": ["error", "inside"],
@@ -258,6 +265,6 @@ module.exports = {
         "wrap-regex": "off",                    //
 
         "mysticatea/arrow-parens": "error",
-        "mysticatea/block-scoped-var": "off"    // Use on ES5 environment only.
-    }
-};
+        "mysticatea/block-scoped-var": "off",   // Use on ES5 environment only.
+    },
+}

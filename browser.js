@@ -3,10 +3,10 @@
  * @copyright 2015 Toru Nagashima. All rights reserved.
  * See LICENSE file in root directory for full license.
  */
-"use strict";
+"use strict"
 
-var originalGlobals = require("globals").browser;
-var globals = {};
+var originalGlobals = require("globals").browser
+var globals = {}
 var allows = [
     "atob",
     "btoa",
@@ -23,15 +23,15 @@ var allows = [
     "sessionStorage",
     "setInterval",
     "setTimeout",
-    "window"
-];
+    "window",
+]
 
 Object.keys(originalGlobals).forEach(function(key) {
     if (key[0] === key[0].toUpperCase() || allows.indexOf(key) !== -1) {
-        globals[key] = originalGlobals[key];
+        globals[key] = originalGlobals[key]
     }
-});
+})
 
 module.exports = {
-    "globals": globals
-};
+    "globals": globals,
+}

@@ -3,12 +3,10 @@
  * @copyright 2015 Toru Nagashima. All rights reserved.
  * See LICENSE file in root directory for full license.
  */
-"use strict";
+"use strict"
 
-var extend = require("./lib/extend");
-var base = require("./base");
-
-module.exports = extend(base, {
+module.exports = {
+    "extends": "./base.js",
     "rules": {
         // Possible Errors Section
         "no-inner-declarations": ["error", "functions"], // syntax-error in ES5
@@ -44,6 +42,6 @@ module.exports = extend(base, {
 
         // My plugin.
         "mysticatea/arrow-parens": "off",
-        "mysticatea/block-scoped-var": "error"
-    }
-});
+        "mysticatea/block-scoped-var": "error",
+    },
+}

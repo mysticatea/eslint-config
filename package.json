@@ -15,8 +15,8 @@
   "scripts": {
     "preversion": "npm test",
     "postversion": "git push && git push --tags",
-    "test": "cd lib && node check-rules.js",
-    "lint": "eslint ."
+    "pretest": "eslint lib \"*.js\"",
+    "test": "cd lib && node check-rules.js"
   },
   "engines": {
     "node": "^0.10.0 || ^0.12.0 || ^4.0.0 || ^6.0.0",
@@ -30,11 +30,11 @@
   "dependencies": {
     "eslint-plugin-mysticatea": "^1.0.3",
     "eslint-plugin-node": "^1.4.0",
-    "globals": "^9.0.0",
-    "object-assign": "^4.0.1"
+    "globals": "^9.0.0"
   },
   "devDependencies": {
-    "eslint": "^2.10.2"
+    "eslint": "^2.10.2",
+    "object-assign": "^4.0.1"
   },
   "repository": {
     "type": "git",
