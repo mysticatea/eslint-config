@@ -1,5 +1,10 @@
 # eslint-config-mysticatea
 
+[![npm version](https://img.shields.io/npm/v/eslint-config-mysticatea.svg)](https://www.npmjs.com/package/eslint-config-mysticatea)
+[![Downloads/month](https://img.shields.io/npm/dm/eslint-config-mysticatea.svg)](https://www.npmjs.com/package/eslint-config-mysticatea)
+[![Build Status](https://travis-ci.org/mysticatea/eslint-config.svg?branch=master)](https://travis-ci.org/mysticatea/eslint-config)
+[![Dependency Status](https://david-dm.org/mysticatea/eslint-config.svg)](https://david-dm.org/mysticatea/eslint-config)
+
 Shareable configurations of ESLint for me.
 
 There is basic configuration at [base.js](./base.js).
@@ -20,6 +25,7 @@ First, please choose a base template.
 Second, please choose a optional template and add it.
 
 - `mysticatea/browser` - An additional setting for browser environment.
+- `mysticatea/mocha` - An additional setting for mocha environment.
 - `mysticatea/modules` - An additional setting for ECMAScript 2015 Modules enviroment.
 - `mysticatea/node` - An additional setting for Node.js environment.
 
