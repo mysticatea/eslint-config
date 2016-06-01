@@ -1,6 +1,6 @@
 {
     "extends": ["./es5.js", "./node.js"],
     "rules": {
-        "quote-props": [2, "always"]
+        "quote-props": ["error", "always"]
     }
 }

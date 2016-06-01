@@ -11,39 +11,39 @@ var base = require("./base");
 module.exports = extend(base, {
     "rules": {
         // Possible Errors Section
-        "no-inner-declarations": [2, "functions"], // syntax-error in ES5
+        "no-inner-declarations": ["error", "functions"], // syntax-error in ES5
 
         // Best Practices Section
-        "no-proto": 2,
-        "no-redeclare": 0, // `mysticatea/block-scoped-var` instead.
+        "no-proto": "error",
+        "no-redeclare": "off", // `mysticatea/block-scoped-var` instead.
 
         // ECMAScript 6 Section
-        "arrow-body-style": 0,
-        "arrow-parens": 0,
-        "arrow-spacing": 0,
-        "constructor-super": 0,
-        "generator-star-spacing": 0,
-        "no-class-assign": 0,
-        "no-confusing-arrow": 0,
-        "no-const-assign": 0,
-        "no-dupe-class-members": 0,
-        "no-new-symbol": 0,
-        "no-this-before-super": 0,
-        "no-var": 0,
-        "no-useless-constructor": 0,
-        "object-shorthand": 0,
-        "prefer-arrow-callback": 0,
-        "prefer-const": 0,
-        "prefer-reflect": 0,
-        "prefer-rest-params": 0,
-        "prefer-spread": 0,
-        "prefer-template": 0,
-        "require-yield": 0,
-        "template-curly-spacing": 0,
-        "yield-star-spacing": 0,
+        "arrow-body-style": "off",
+        "arrow-parens": "off",
+        "arrow-spacing": "off",
+        "constructor-super": "off",
+        "generator-star-spacing": "off",
+        "no-class-assign": "off",
+        "no-confusing-arrow": "off",
+        "no-const-assign": "off",
+        "no-dupe-class-members": "off",
+        "no-new-symbol": "off",
+        "no-this-before-super": "off",
+        "no-var": "off",
+        "no-useless-constructor": "off",
+        "object-shorthand": "off",
+        "prefer-arrow-callback": "off",
+        "prefer-const": "off",
+        "prefer-reflect": "off",
+        "prefer-rest-params": "off",
+        "prefer-spread": "off",
+        "prefer-template": "off",
+        "require-yield": "off",
+        "template-curly-spacing": "off",
+        "yield-star-spacing": "off",
 
         // My plugin.
-        "mysticatea/arrow-parens": 0,
-        "mysticatea/block-scoped-var": 2
+        "mysticatea/arrow-parens": "off",
+        "mysticatea/block-scoped-var": "error"
     }
 });
