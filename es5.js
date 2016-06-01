@@ -32,6 +32,7 @@ module.exports = {
         "no-var": "off",
         "no-useless-computed-key": "off",
         "no-useless-constructor": "off",
+        "no-useless-rename": "off",
         "object-shorthand": "off",
         "prefer-arrow-callback": "off",
         "prefer-const": "off",
