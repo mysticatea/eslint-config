@@ -23,11 +23,11 @@
   },
   "peerDependencies": {
     "eslint": "^2.11.1",
-    "eslint-plugin-mysticatea": "^1.0.3",
+    "eslint-plugin-mysticatea": "^3.0.0",
     "eslint-plugin-node": "^1.4.0"
   },
   "dependencies": {
-    "eslint-plugin-mysticatea": "^1.0.3",
+    "eslint-plugin-mysticatea": "^3.0.0",
     "eslint-plugin-node": "^1.4.0",
     "globals": "^9.0.0"
   },

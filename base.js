@@ -269,5 +269,8 @@ module.exports = {
 
         "mysticatea/arrow-parens": "error",
         "mysticatea/block-scoped-var": "off",   // Use on ES5 environment only.
+        "mysticatea/no-literal-call": "error",
+        "mysticatea/no-use-ignored-vars": "error",
+        "mysticatea/no-useless-rest-spread": "error",
     },
 }

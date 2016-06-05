@@ -48,5 +48,6 @@ module.exports = {
         // My plugin.
         "mysticatea/arrow-parens": "off",
         "mysticatea/block-scoped-var": "error",
+        "mysticatea/no-useless-rest-spread": "off",
     },
 }
