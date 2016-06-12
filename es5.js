@@ -41,6 +41,7 @@ module.exports = {
         "prefer-spread": "off",
         "prefer-template": "off",
         "require-yield": "off",
+        "rest-spread-spacing": "off",
         "sort-imports": "off",
         "template-curly-spacing": "off",
         "yield-star-spacing": "off",

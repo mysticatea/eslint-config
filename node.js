@@ -6,9 +6,7 @@
 "use strict"
 
 module.exports = {
-    "parserOptions": {
-        "ecmaFeatures": {"globalReturn": true},
-    },
+    "parserOptions": {"ecmaFeatures": {"globalReturn": true}},
     "plugins": ["node"],
     "globals": {
         "__dirname": false,

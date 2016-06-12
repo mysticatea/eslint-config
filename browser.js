@@ -32,6 +32,4 @@ Object.keys(originalGlobals).forEach(function(key) {
     }
 })
 
-module.exports = {
-    "globals": globals,
-}
+module.exports = {"globals": globals}

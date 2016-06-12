@@ -89,6 +89,12 @@ module.exports = {
         "no-lone-blocks": "error",
         "no-lonely-if": "error",
         "no-loop-func": "error",
+        "no-mixed-operators": ["error", {
+            "groups": [
+                ["&", "|", "^", "~", "<<", ">>", ">>>"],
+                ["&&", "||"],
+            ],
+        }],
         "no-mixed-spaces-and-tabs": "error",
         "no-multi-spaces": "error",
         "no-multiple-empty-lines": "error",
@@ -145,6 +151,7 @@ module.exports = {
         "no-void": "error",
         "no-whitespace-before-property": "error",
         "no-with": "error",
+        "object-curly-newline": "error",
         "object-curly-spacing": "error",
         "object-shorthand": "error",
         "one-var": ["error", {"initialized": "never", "uninitialized": "always"}],
@@ -166,6 +173,7 @@ module.exports = {
             },
         }],
         "require-yield": "error",
+        "rest-spread-spacing": "error",
         "semi": ["error", "never"],
         "semi-spacing": "error",
         "space-before-blocks": "error",
@@ -193,9 +201,7 @@ module.exports = {
         "use-isnan": "error",
         "valid-jsdoc": ["error", {
             "requireReturn": true,
-            "prefer": {
-                "return": "returns",
-            },
+            "prefer": {"return": "returns"},
             "preferType": {
                 "Boolean": "boolean",
                 "Number": "number",
@@ -229,6 +235,7 @@ module.exports = {
         "lines-around-comment": "off",          // Under consideration...
         "max-depth": "off",                     //
         "max-len": "off",                       //
+        "max-lines": "off",                     //
         "max-statements": "off",                //
         "newline-after-var": "off",             // Case by case.
         "newline-before-return": "off",         // Case by case.

@@ -7,7 +7,5 @@
 
 module.exports = {
     "env": {"mocha": true},
-    "rules": {
-        "max-nested-callbacks": "off",
-    },
+    "rules": {"max-nested-callbacks": "off"},
 }
