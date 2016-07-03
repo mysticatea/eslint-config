@@ -127,7 +127,6 @@ module.exports = {
         "no-throw-literal": "error",
         "no-trailing-spaces": "error",
         "no-undef": ["error", {"typeof": true}],
-        "no-undef-init": "error",
         "no-unexpected-multiline": "error",
         "no-unmodified-loop-condition": "error",
         "no-unneeded-ternary": "error",
@@ -262,6 +261,7 @@ module.exports = {
         "no-restricted-syntax": "off",          //
         "no-sync": "off",                       // This is useful on CLI tools.
         "no-ternary": "off",                    // I like it.
+        "no-undef-init": "off",                 //
         "no-undefined": "off",                  // This is safe on strict mode.
         "no-underscore-dangle": "off",          // Use for private.
         "no-warning-comments": "off",           //
