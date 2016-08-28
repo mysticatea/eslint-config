@@ -6,6 +6,18 @@
 "use strict"
 
 module.exports = {
-    "env": {"mocha": true},
+    "globals": {
+        "after": false,
+        "afterEach": false,
+        "before": false,
+        "beforeEach": false,
+        "context": false,
+        "describe": false,
+        "it": false,
+        "mocha": false,
+        "xcontext": false,
+        "xdescribe": false,
+        "xit": false,
+    },
     "rules": {"max-nested-callbacks": "off"},
 }
