@@ -100,8 +100,6 @@ module.exports = {
         "no-mixed-spaces-and-tabs": "error",
         "no-multi-spaces": "error",
         "no-multiple-empty-lines": "error",
-        "no-native-reassign": "error",
-        "no-negated-in-lhs": "error",
         "no-new": "error",
         "no-new-object": "error",
         "no-new-require": "error",
@@ -123,7 +121,6 @@ module.exports = {
         "no-sequences": "error",
         "no-shadow": ["error", {"builtinGlobals": true}],
         "no-shadow-restricted-names": "error",
-        "no-spaced-func": "error",
         "no-sparse-arrays": "error",
         "no-tabs": "error",
         "no-template-curly-in-string": "error",
@@ -301,6 +298,12 @@ module.exports = {
         "sort-vars": "off",                     //
         "vars-on-top": "off",                   // I hate this.
         "wrap-regex": "off",                    //
+
+        // Deprecated rules.
+        //eslint-disable-next-line sort-keys
+        "no-native-reassign": "off",
+        "no-negated-in-lhs": "off",
+        "no-spaced-func": "off",
 
         //eslint-disable-next-line sort-keys
         "mysticatea/arrow-parens": "error",

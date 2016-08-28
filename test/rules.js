@@ -50,6 +50,19 @@ function isES6Rule(name) {
     return category === "ECMAScript 6"
 }
 
+/**
+ * Checks whether a given core rule is deprecated or not.
+ *
+ * @param {string} name - The name of a core rule.
+ * @returns {boolean} `true` if the rule is deprecated.
+ */
+function isDeprecated(name) {
+    var rule = require("eslint/lib/rules/" + name)
+    var meta = rule && rule.meta
+
+    return Boolean(meta && meta.deprecated)
+}
+
 //------------------------------------------------------------------------------
 // Tests
 //------------------------------------------------------------------------------
@@ -61,6 +74,7 @@ describe("'base.js'", function() {
         getRuleList(MYSTICATEA_RULES_DIR, "mysticatea/")
     )
     var removedRules = Object.keys(require("eslint/conf/replacements.json").rules)
+    var deprecatedRules = getRuleList(CORE_RULES_DIR, "").filter(isDeprecated)
 
     existingRules.forEach(function(name) {
         it("should include existing rule '" + name + "'.", function() {
@@ -72,6 +86,12 @@ describe("'base.js'", function() {
     removedRules.forEach(function(name) {
         it("should not include removed rule '" + name + "'.", function() {
             assert(name in config === false, "'" + name + "' is found.")
+        })
+    })
+
+    deprecatedRules.forEach(function(name) {
+        it("should turn deprecated rule '" + name + "' off.", function() {
+            assert.strictEqual(config[name], "off")
         })
     })
 })
