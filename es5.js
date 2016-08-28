@@ -16,6 +16,7 @@ module.exports = {
         "no-redeclare": "off", // `mysticatea/block-scoped-var` instead.
 
         // ECMAScript 6 Section
+        //eslint-disable-next-line sort-keys
         "arrow-body-style": "off",
         "arrow-parens": "off",
         "arrow-spacing": "off",
@@ -29,10 +30,10 @@ module.exports = {
         "no-new-symbol": "off",
         "no-restricted-imports": "off",
         "no-this-before-super": "off",
-        "no-var": "off",
         "no-useless-computed-key": "off",
         "no-useless-constructor": "off",
         "no-useless-rename": "off",
+        "no-var": "off",
         "object-shorthand": "off",
         "prefer-arrow-callback": "off",
         "prefer-const": "off",
@@ -47,6 +48,7 @@ module.exports = {
         "yield-star-spacing": "off",
 
         // My plugin.
+        //eslint-disable-next-line sort-keys
         "mysticatea/arrow-parens": "off",
         "mysticatea/block-scoped-var": "error",
         "mysticatea/no-useless-rest-spread": "off",

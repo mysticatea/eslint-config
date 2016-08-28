@@ -6,9 +6,8 @@
 "use strict"
 
 module.exports = {
-    "parserOptions": {"ecmaFeatures": {"globalReturn": true}},
-    "plugins": ["node"],
     "globals": {
+        "Intl": false,
         "__dirname": false,
         "__filename": false,
         "clearImmediate": false,
@@ -16,7 +15,6 @@ module.exports = {
         "clearTimeout": false,
         "console": false,
         "exports": false,
-        "Intl": false,
         "module": false,
         "process": false,
         "require": false,
@@ -24,6 +22,8 @@ module.exports = {
         "setInterval": false,
         "setTimeout": false,
     },
+    "parserOptions": {"ecmaFeatures": {"globalReturn": true}},
+    "plugins": ["node"],
     "rules": {
         "node/no-deprecated-api": "error",
         "node/no-missing-import": "error",

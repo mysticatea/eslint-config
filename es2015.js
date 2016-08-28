@@ -6,6 +6,6 @@
 "use strict"
 
 module.exports = {
-    "extends": "./base.js",
     "env": {"es6": true},
+    "extends": "./base.js",
 }

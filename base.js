@@ -79,9 +79,9 @@ module.exports = {
         "no-invalid-regexp": "error",
         "no-invalid-this": "error",
         "no-irregular-whitespace": ["error", {
-            "skipStrings": false,
             "skipComments": false,
             "skipRegExps": false,
+            "skipStrings": false,
             "skipTemplates": false,
         }],
         "no-iterator": "error",
@@ -135,9 +135,9 @@ module.exports = {
         "no-unused-expressions": "error",
         "no-unused-labels": "error",
         "no-unused-vars": ["error", {
+            "argsIgnorePattern": "^_[a-zA-Z]+$",
             "caughtErrors": "all",
             "varsIgnorePattern": "^_[a-zA-Z]+$",
-            "argsIgnorePattern": "^_[a-zA-Z]+$",
         }],
         "no-use-before-define": ["error", "nofunc"],
         "no-useless-call": "error",
@@ -153,8 +153,16 @@ module.exports = {
         "object-curly-newline": "error",
         "object-curly-spacing": "error",
         "object-shorthand": "error",
-        "one-var": ["error", {"initialized": "never", "uninitialized": "always"}],
-        "operator-linebreak": ["error", "after", {"overrides": {"?": "ignore", ":": "ignore"}}],
+        "one-var": ["error", {
+            "initialized": "never",
+            "uninitialized": "always",
+        }],
+        "operator-linebreak": ["error", "after", {
+            "overrides": {
+                ":": "ignore",
+                "?": "ignore",
+            },
+        }],
         "padded-blocks": ["error", "never"],
         "prefer-arrow-callback": "error",
         "prefer-const": "error",
@@ -166,9 +174,9 @@ module.exports = {
         "radix": "error",
         "require-jsdoc": ["error", {
             "require": {
+                "ClassDeclaration": true,
                 "FunctionDeclaration": true,
                 "MethodDefinition": true,
-                "ClassDeclaration": true,
             },
         }],
         "require-yield": "error",
@@ -199,27 +207,29 @@ module.exports = {
         "unicode-bom": ["error", "never"],
         "use-isnan": "error",
         "valid-jsdoc": ["error", {
-            "requireReturn": true,
             "prefer": {"return": "returns"},
             "preferType": {
                 "Boolean": "boolean",
-                "Number": "number",
-                "String": "string",
-                "Object": "object",
-                "Symbol": "symbol",
                 "Function": "function",
+                "Number": "number",
+                "Object": "object",
+                "String": "string",
+                "Symbol": "symbol",
             },
+            "requireReturn": true,
         }],
         "valid-typeof": "error",
         "wrap-iife": ["error", "inside"],
         "yield-star-spacing": ["error", "after"],
         "yoda": ["error", "never", {"exceptRange": true}],
 
+        //eslint-disable-next-line sort-keys
         "complexity": ["warn", {"max": 12}],
         "max-nested-callbacks": ["warn", {"max": 4}],
         "max-params": ["warn", {"max": 8}],
         "no-console": "warn",
 
+        //eslint-disable-next-line sort-keys
         "arrow-parens": "off",                  // Use "mysticatea/arrow-parens"
         "block-scoped-var": "off",              // Use "mysticatea/block-scoped-var"
         "callback-return": "off",               // Under consideration...
@@ -274,6 +284,7 @@ module.exports = {
         "vars-on-top": "off",                   // I hate this.
         "wrap-regex": "off",                    //
 
+        //eslint-disable-next-line sort-keys
         "mysticatea/arrow-parens": "error",
         "mysticatea/block-scoped-var": "off",   // Use on ES5 environment only.
         "mysticatea/no-literal-call": "error",
