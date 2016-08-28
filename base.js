@@ -28,6 +28,7 @@ module.exports = {
         "dot-notation": "error",
         "eol-last": "error",
         "eqeqeq": ["error", "allow-null"],
+        "func-call-spacing": "error",
         "func-style": ["error", "declaration"],
         "generator-star-spacing": ["error", "after"],
         "indent": ["error", 4, {"SwitchCase": 1}],
@@ -73,6 +74,7 @@ module.exports = {
         "no-fallthrough": "error",
         "no-floating-decimal": "error",
         "no-func-assign": "error",
+        "no-global-assign": "error",
         "no-implicit-coercion": "error",
         "no-implicit-globals": "error",
         "no-implied-eval": "error",
@@ -116,13 +118,15 @@ module.exports = {
         "no-regex-spaces": "error",
         "no-return-assign": "error",
         "no-script-url": "error",
-        "no-self-assign": "error",
+        "no-self-assign": ["error", {"props": true}],
         "no-self-compare": "error",
         "no-sequences": "error",
         "no-shadow": ["error", {"builtinGlobals": true}],
         "no-shadow-restricted-names": "error",
         "no-spaced-func": "error",
         "no-sparse-arrays": "error",
+        "no-tabs": "error",
+        "no-template-curly-in-string": "error",
         "no-this-before-super": "error",
         "no-throw-literal": "error",
         "no-trailing-spaces": "error",
@@ -132,6 +136,7 @@ module.exports = {
         "no-unneeded-ternary": "error",
         "no-unreachable": "error",
         "no-unsafe-finally": "error",
+        "no-unsafe-negation": "error",
         "no-unused-expressions": "error",
         "no-unused-labels": "error",
         "no-unused-vars": ["error", {
@@ -189,20 +194,30 @@ module.exports = {
         "space-infix-ops": "error",
         "space-unary-ops": "error",
         "spaced-comment": ["error", "always", {
-            "exceptions": ["-", "="],
-            "markers": [
-                "eslint",
-                "eslint-env",
-                "eslint-disable",
-                "eslint-enable",
-                "eslint-disable-line",
-                "eslint-disable-next-line",
-                "exported",
-                "globals",
-                "istanbul",
-            ],
+            "block": {
+                "balanced": true,
+                "markers": [
+                    "eslint",
+                    "eslint-env",
+                    "eslint-disable",
+                    "eslint-enable",
+                    "exported",
+                    "globals",
+                    "istanbul",
+                ],
+            },
+            "line": {
+                "exceptions": ["-", "="],
+                "markers": [
+                    "eslint-disable-line",
+                    "eslint-disable-next-line",
+                    "TODO:",
+                    "FIXME:",
+                ],
+            },
         }],
         "strict": ["error", "global"],
+        "symbol-description": "error",
         "template-curly-spacing": "error",
         "unicode-bom": ["error", "never"],
         "use-isnan": "error",
@@ -218,12 +233,13 @@ module.exports = {
             },
             "requireReturn": true,
         }],
-        "valid-typeof": "error",
+        "valid-typeof": ["error", {"requireStringLiterals": true}],
         "wrap-iife": ["error", "inside"],
         "yield-star-spacing": ["error", "after"],
         "yoda": ["error", "never", {"exceptRange": true}],
 
         //eslint-disable-next-line sort-keys
+        "class-methods-use-this": "warn",
         "complexity": ["warn", {"max": 12}],
         "max-nested-callbacks": ["warn", {"max": 4}],
         "max-params": ["warn", {"max": 8}],
@@ -246,6 +262,7 @@ module.exports = {
         "max-len": "off",                       //
         "max-lines": "off",                     //
         "max-statements": "off",                //
+        "multiline-ternary": "off",             //
         "newline-after-var": "off",             // Case by case.
         "newline-before-return": "off",         // Case by case.
         "newline-per-chained-call": "off",      // Case by case.
@@ -280,6 +297,7 @@ module.exports = {
         "operator-assignment": "off",           //
         "prefer-reflect": "off",                // Too early, IMO
         "sort-imports": "off",                  //
+        "sort-keys": "off",                     //
         "sort-vars": "off",                     //
         "vars-on-top": "off",                   // I hate this.
         "wrap-regex": "off",                    //

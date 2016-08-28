@@ -16,24 +16,26 @@
     "preversion": "npm test",
     "postversion": "git push && git push --tags",
     "pretest": "eslint .",
-    "test": "cd test && mocha rules.js --reporter progress"
+    "test": "cd test && mocha rules.js --reporter progress",
+    "watch": "chokidar \"*.js\" \"test/*.js\" --initial --command \"npm test\""
   },
   "engines": {
     "node": "^4.0.0 || >=6.0.0"
   },
   "peerDependencies": {
-    "eslint": ">=3.0.0",
+    "eslint": ">=3.4.0",
     "eslint-plugin-mysticatea": ">=3.0.2",
-    "eslint-plugin-node": ">=1.5.2"
+    "eslint-plugin-node": ">=2.0.0"
   },
   "dependencies": {
     "eslint-plugin-mysticatea": "^3.0.2",
-    "eslint-plugin-node": "^1.5.2",
+    "eslint-plugin-node": "^2.0.0",
     "globals": "^9.8.0"
   },
   "devDependencies": {
-    "eslint": "^3.0.0",
-    "mocha": "^2.5.3"
+    "chokidar-cli": "^1.2.0",
+    "eslint": "^3.4.0",
+    "mocha": "^3.0.2"
   },
   "repository": {
     "type": "git",

@@ -20,6 +20,7 @@ module.exports = {
         "arrow-body-style": "off",
         "arrow-parens": "off",
         "arrow-spacing": "off",
+        "class-methods-use-this": "off",
         "constructor-super": "off",
         "generator-star-spacing": "off",
         "no-class-assign": "off",
@@ -29,6 +30,7 @@ module.exports = {
         "no-duplicate-imports": "off",
         "no-new-symbol": "off",
         "no-restricted-imports": "off",
+        "no-template-curly-in-string": "off",
         "no-this-before-super": "off",
         "no-useless-computed-key": "off",
         "no-useless-constructor": "off",
@@ -44,6 +46,7 @@ module.exports = {
         "require-yield": "off",
         "rest-spread-spacing": "off",
         "sort-imports": "off",
+        "symbol-description": "off",
         "template-curly-spacing": "off",
         "yield-star-spacing": "off",
 
