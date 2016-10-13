@@ -5,30 +5,35 @@
 [![Build Status](https://travis-ci.org/mysticatea/eslint-config.svg?branch=master)](https://travis-ci.org/mysticatea/eslint-config)
 [![Dependency Status](https://david-dm.org/mysticatea/eslint-config.svg)](https://david-dm.org/mysticatea/eslint-config)
 
-Shareable configurations of ESLint for me.
+Shareable configurations of ESLint.
 
 There is basic configuration at [base.js](./base.js).
 
-## Installation
+## :cd: Installation
 
 ```
 npm install --save-dev eslint eslint-config-mysticatea
 ```
 
-- Requires Node.js `>=4.0.0`
+### Requirements
 
-## Usage
+- Node.js `^4.0.0`, `^6.0.0`, or newer.
+- ESLint `^3.7.1`, or newer.
 
-First, please choose a base template.
+## :book: Usage
+
+Write in your ESLint configurations: http://eslint.org/docs/user-guide/configuring#using-the-configuration-from-a-plugin
+
+**First, please choose a base template.**
 
 - `mysticatea` - A rule set for ECMAScript 2015 (ES6).
 - `mysticatea/es5` - A rule set for ES5.
 
-Second, please choose a optional template and add it.
+**Second, please choose a optional template and add it.**
 
 - `mysticatea/browser` - An additional setting for browser environment.
 - `mysticatea/mocha` - An additional setting for mocha environment.
-- `mysticatea/modules` - An additional setting for ECMAScript 2015 Modules enviroment.
+- `mysticatea/modules` - An additional setting for ES Modules enviroment.
 - `mysticatea/node` - An additional setting for Node.js environment.
 
 Then, please write those into `extends` field.
@@ -72,11 +77,7 @@ Then, please write those into `extends` field.
   }
   ```
 
-## Change log
-
-- See [GitHub Releases](https://github.com/mysticatea/eslint-config/releases)
-
-## Semantic Versioning Policy
+## :anchor: Semantic Versioning Policy
 
 This package follows [Semantic Versioning 2.0.0](http://semver.org/)
 
@@ -94,21 +95,20 @@ This package follows [Semantic Versioning 2.0.0](http://semver.org/)
     - Required Node.js version is changed.
     - Required ESLint version is changed.
 
-## Contributing
+## :newspaper: Changelog
+
+- [GitHub Releases](https://github.com/mysticatea/eslint-config/releases)
+
+## :muscle: Contributing
+
+### Development Tools
+
+- `npm test` runs tests.
+- `npm run watch` runs tests when source code are changed.
 
 There is a test script.
 
-- Check lacking configurations of added rules.
+- Check lacking configurations of new rules.
 - Check configurations of rules. (options are valid or not)
 - Check configurations of deprecated rules. (should turn those off)
 - Check configurations of removed rules. (should remove those)
-
-```bash
-$ npm test
-```
-
-or
-
-```bash
-$ npm run watch
-```
