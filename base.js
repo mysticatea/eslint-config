@@ -6,7 +6,10 @@
 "use strict"
 
 module.exports = {
-    "plugins": ["mysticatea"],
+    "plugins": [
+        "eslint-comments",
+        "mysticatea",
+    ],
     "rules": {
         "accessor-pairs": "error",
         "array-bracket-spacing": "error",
@@ -37,6 +40,7 @@ module.exports = {
         "key-spacing": "error",
         "keyword-spacing": "error",
         "linebreak-style": ["error", "unix"],
+        "lines-around-directive": ["error", {"after": "always", "before": "never"}],
         "max-statements-per-line": ["error", {"max": 1}],
         "new-cap": "error",
         "new-parens": "error",
@@ -114,6 +118,15 @@ module.exports = {
         "no-prototype-builtins": "error",
         "no-redeclare": ["error", {"builtinGlobals": true}],
         "no-regex-spaces": "error",
+        "no-restricted-properties": ["error",
+            {"property": "__count__"},
+            {"property": "__noSuchMethod__"},
+            {"property": "__parent__"},
+            {"property": "__defineGetter__"},
+            {"property": "__defineSetter__"},
+            {"property": "__lookupGetter__"},
+            {"property": "__lookupSetter__"},
+        ],
         "no-return-assign": "error",
         "no-script-url": "error",
         "no-self-assign": ["error", {"props": true}],
@@ -168,6 +181,7 @@ module.exports = {
         "padded-blocks": ["error", "never"],
         "prefer-arrow-callback": "error",
         "prefer-const": "error",
+        "prefer-numeric-literals": "error",
         "prefer-rest-params": "error",
         "prefer-spread": "error",
         "prefer-template": "error",
@@ -254,7 +268,8 @@ module.exports = {
         "id-blacklist": "off",                  //
         "id-length": "off",                     //
         "id-match": "off",                      //
-        "lines-around-comment": "off",          // Under consideration...
+        "line-comment-position": "off",         //
+        "lines-around-comment": "off",          //
         "max-depth": "off",                     //
         "max-len": "off",                       //
         "max-lines": "off",                     //
@@ -306,9 +321,29 @@ module.exports = {
         "no-spaced-func": "off",
 
         //eslint-disable-next-line sort-keys
+        "eslint-comments/disable-enable-pair": "error",
+        "eslint-comments/no-duplicate-disable": "error",
+        "eslint-comments/no-unlimited-disable": "error",
+        "eslint-comments/no-unused-disable": "error",
+        "eslint-comments/no-unused-enable": "error",
+        "eslint-comments/no-use": ["error", {
+            "allow": [
+                "eslint",
+                "eslint-disable",
+                "eslint-disable-line",
+                "eslint-disable-next-line",
+                "eslint-enable",
+                "eslint-env",
+                "globals",
+            ],
+        }],
+
         "mysticatea/arrow-parens": "error",
         "mysticatea/block-scoped-var": "off",   // Use on ES5 environment only.
+        "mysticatea/no-instanceof-array": "error",
+        "mysticatea/no-instanceof-wrapper": "error",
         "mysticatea/no-literal-call": "error",
+        "mysticatea/no-this-in-static": "error",
         "mysticatea/no-use-ignored-vars": "error",
         "mysticatea/no-useless-rest-spread": "error",
     },

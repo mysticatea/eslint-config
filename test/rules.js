@@ -16,6 +16,7 @@ var validator = require("eslint/lib/config/config-validator")
 var CORE_RULES_DIR = path.join(__dirname, "../node_modules/eslint/lib/rules/")
 var MYSTICATEA_RULES_DIR = path.join(__dirname, "../node_modules/eslint-plugin-mysticatea/lib/rules/")
 var NODE_RULES_DIR = path.join(__dirname, "../node_modules/eslint-plugin-node/lib/rules/")
+var COMMENT_RULES_DIR = path.join(__dirname, "../node_modules/eslint-plugin-eslint-comments/lib/rules/")
 
 /**
  * Gets existing rules from a given directory.
@@ -71,7 +72,8 @@ describe("'base.js'", function() {
     var config = require("../base").rules
     var existingRules = [].concat(
         getRuleList(CORE_RULES_DIR, ""),
-        getRuleList(MYSTICATEA_RULES_DIR, "mysticatea/")
+        getRuleList(MYSTICATEA_RULES_DIR, "mysticatea/"),
+        getRuleList(COMMENT_RULES_DIR, "eslint-comments/")
     )
     var removedRules = Object.keys(require("eslint/conf/replacements.json").rules)
     var deprecatedRules = getRuleList(CORE_RULES_DIR, "").filter(isDeprecated)
