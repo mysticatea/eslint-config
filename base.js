@@ -346,5 +346,10 @@ module.exports = {
         "mysticatea/no-this-in-static": "error",
         "mysticatea/no-use-ignored-vars": "error",
         "mysticatea/no-useless-rest-spread": "error",
+
+        // To avoid breaking changes
+        //eslint-disable-next-line sort-keys
+        "func-name-matching": "off",
+        "no-useless-return": "off",
     },
 }
