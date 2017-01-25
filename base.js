@@ -102,6 +102,7 @@ module.exports = {
             ],
         }],
         "no-mixed-spaces-and-tabs": "error",
+        "no-multi-assign": "error",
         "no-multi-spaces": "error",
         "no-multiple-empty-lines": "error",
         "no-new": "error",
@@ -128,6 +129,7 @@ module.exports = {
             {"property": "__lookupSetter__"},
         ],
         "no-return-assign": "error",
+        "no-return-await": "error",
         "no-script-url": "error",
         "no-self-assign": ["error", {"props": true}],
         "no-self-compare": "error",
@@ -161,13 +163,14 @@ module.exports = {
         "no-useless-constructor": "error",
         "no-useless-escape": "error",
         "no-useless-rename": "error",
+        "no-useless-return": "error",
         "no-var": "error",
         "no-void": "error",
         "no-whitespace-before-property": "error",
         "no-with": "error",
         "object-curly-newline": "error",
         "object-curly-spacing": "error",
-        "object-shorthand": "error",
+        "object-shorthand": ["error", "always", {"avoidExplicitReturnArrows": true}],
         "one-var": ["error", {
             "initialized": "never",
             "uninitialized": "always",
@@ -182,14 +185,17 @@ module.exports = {
         "prefer-arrow-callback": "error",
         "prefer-const": "error",
         "prefer-numeric-literals": "error",
+        "prefer-promise-reject-errors": "error",
         "prefer-rest-params": "error",
         "prefer-spread": "error",
         "prefer-template": "error",
         "quote-props": ["error", "consistent-as-needed"],
         "quotes": ["error", "double"],
         "radix": "error",
+        "require-await": "error",
         "require-jsdoc": ["error", {
             "require": {
+                "ArrowFunctionExpression": true,
                 "ClassDeclaration": true,
                 "FunctionDeclaration": true,
                 "MethodDefinition": true,
@@ -200,7 +206,11 @@ module.exports = {
         "semi": ["error", "never"],
         "semi-spacing": "error",
         "space-before-blocks": "error",
-        "space-before-function-paren": ["error", "never"],
+        "space-before-function-paren": ["error", {
+            "anonymous": "never",
+            "asyncArrow": "always",
+            "named": "never",
+        }],
         "space-in-parens": "error",
         "space-infix-ops": "error",
         "space-unary-ops": "error",
@@ -260,7 +270,9 @@ module.exports = {
         "arrow-parens": "off",                  // Use "mysticatea/arrow-parens"
         "block-scoped-var": "off",              // Use "mysticatea/block-scoped-var"
         "callback-return": "off",               // Under consideration...
+        "capitalized-comments": "off",          //
         "consistent-this": "off",               // Meaningless, IMO.
+        "func-name-matching": "off",            // Wait for https://github.com/eslint/eslint/issues/7423
         "func-names": "off",                    // This is noisy for co.js
         "global-require": "off",                // I'm sometimes using conditional require.
         "guard-for-in": "off",                  // I prefer `Object.create(null)`.
@@ -278,6 +290,7 @@ module.exports = {
         "newline-after-var": "off",             // Case by case.
         "newline-before-return": "off",         // Case by case.
         "newline-per-chained-call": "off",      // Case by case.
+        "no-await-in-loop": "off",              // await in loop is one of good features in async/await.
         "no-bitwise": "off",                    // I'm familiar with bitwise ops.
         "no-confusing-arrow": "off",            // This is very noisy.
         "no-continue": "off",                   // I like fast return.
@@ -307,6 +320,7 @@ module.exports = {
         "object-property-newline": "off",       //
         "one-var-declaration-per-line": "off",  // Use one-var
         "operator-assignment": "off",           //
+        "prefer-destructuring": "off",          //
         "prefer-reflect": "off",                // Too early, IMO
         "sort-imports": "off",                  //
         "sort-keys": "off",                     //
@@ -346,10 +360,5 @@ module.exports = {
         "mysticatea/no-this-in-static": "error",
         "mysticatea/no-use-ignored-vars": "error",
         "mysticatea/no-useless-rest-spread": "error",
-
-        // To avoid breaking changes
-        //eslint-disable-next-line sort-keys
-        "func-name-matching": "off",
-        "no-useless-return": "off",
     },
 }
