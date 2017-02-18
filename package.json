@@ -28,7 +28,6 @@
     "globals": "^9.14.0"
   },
   "devDependencies": {
-    "chokidar-cli": "^1.2.0",
     "eslint": "^3.14.0",
     "mocha": "^3.0.2"
   },
@@ -36,8 +35,8 @@
     "preversion": "npm test",
     "postversion": "git push && git push --tags",
     "pretest": "eslint .",
-    "test": "cd test && mocha rules.js --reporter progress",
-    "watch": "chokidar \"*.js\" \"test/*.js\" --initial --command \"npm test\""
+    "test": "_mocha test/rules.js --reporter progress",
+    "watch": "npm test -- --watch --growl"
   },
   "repository": {
     "type": "git",
