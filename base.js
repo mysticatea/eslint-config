@@ -240,6 +240,7 @@ module.exports = {
         "strict": ["error", "global"],
         "symbol-description": "error",
         "template-curly-spacing": "error",
+        "template-tag-spacing": "error",
         "unicode-bom": ["error", "never"],
         "use-isnan": "error",
         "valid-jsdoc": ["error", {
