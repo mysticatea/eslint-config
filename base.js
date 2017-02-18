@@ -154,6 +154,7 @@ module.exports = {
         "no-unused-vars": ["error", {
             "argsIgnorePattern": "^_[a-zA-Z]+$",
             "caughtErrors": "all",
+            "vars": "all",
             "varsIgnorePattern": "^_[a-zA-Z]+$",
         }],
         "no-use-before-define": ["error", "nofunc"],
