@@ -232,6 +232,7 @@ module.exports = {
                 "markers": [
                     "eslint-disable-line",
                     "eslint-disable-next-line",
+                    "istanbul",
                     "TODO:",
                     "FIXME:",
                 ],
