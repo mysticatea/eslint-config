@@ -267,72 +267,72 @@ module.exports = {
         "no-console": "warn",
 
         //eslint-disable-next-line sort-keys
-        "arrow-parens": "off",                  // Use "mysticatea/arrow-parens"
-        "block-scoped-var": "off",              // Use "mysticatea/block-scoped-var"
-        "callback-return": "off",               // Under consideration...
-        "capitalized-comments": "off",          //
-        "consistent-this": "off",               // Meaningless, IMO.
-        "func-name-matching": "off",            // Wait for https://github.com/eslint/eslint/issues/7423
-        "func-names": "off",                    // This is noisy for co.js
-        "global-require": "off",                // I'm sometimes using conditional require.
-        "guard-for-in": "off",                  // I prefer `Object.create(null)`.
-        "handle-callback-err": "off",           // Under consideration...
-        "id-blacklist": "off",                  //
-        "id-length": "off",                     //
-        "id-match": "off",                      //
-        "line-comment-position": "off",         //
-        "lines-around-comment": "off",          //
-        "max-depth": "off",                     //
-        "max-len": "off",                       //
-        "max-lines": "off",                     //
-        "max-statements": "off",                //
-        "multiline-ternary": "off",             //
-        "newline-after-var": "off",             // Case by case.
-        "newline-before-return": "off",         // Case by case.
-        "newline-per-chained-call": "off",      // Case by case.
-        "no-await-in-loop": "off",              // await in loop is one of good features in async/await.
-        "no-bitwise": "off",                    // I'm familiar with bitwise ops.
-        "no-confusing-arrow": "off",            // This is very noisy.
-        "no-continue": "off",                   // I like fast return.
-        "no-eq-null": "off",                    // I like eq null.
-        "no-inline-comments": "off",            // This is an inline comment.
-        "no-inner-declarations": "off",         // This is allowed on ES6+
-        "no-labels": "off",                     //
-        "no-magic-numbers": "off",              //
-        "no-mixed-requires": "off",             // I'm using "on-ver" never.
-        "no-multi-str": "off",                  // This is allowed on ES5+
-        "no-negated-condition": "off",          // Case by case.
-        "no-nested-ternary": "off",             // I like it.
-        "no-new-func": "off",                   // I like it.
-        "no-path-concat": "off",                // Under consideration...
-        "no-plusplus": "off",                   // I often use it.
-        "no-proto": "off",                      // This is allowed on ES6+
-        "no-restricted-globals": "off",         //
-        "no-restricted-imports": "off",         //
-        "no-restricted-modules": "off",         //
-        "no-restricted-syntax": "off",          //
-        "no-sync": "off",                       // This is useful on CLI tools.
-        "no-ternary": "off",                    // I like it.
-        "no-undef-init": "off",                 //
-        "no-undefined": "off",                  // This is safe on strict mode.
-        "no-underscore-dangle": "off",          // Use for private.
-        "no-warning-comments": "off",           //
-        "object-property-newline": "off",       //
-        "one-var-declaration-per-line": "off",  // Use one-var
-        "operator-assignment": "off",           //
-        "prefer-destructuring": "off",          //
-        "prefer-reflect": "off",                // Too early, IMO
-        "sort-imports": "off",                  //
-        "sort-keys": "off",                     //
-        "sort-vars": "off",                     //
-        "vars-on-top": "off",                   // I hate this.
-        "wrap-regex": "off",                    //
+        "arrow-parens": "off",     // Use "mysticatea/arrow-parens"
+        "block-scoped-var": "off", // Use "mysticatea/block-scoped-var"
+        "callback-return": "off",
+        "capitalized-comments": "off",
+        "consistent-this": "off",
+        "func-name-matching": "off", // Wait for https://github.com/eslint/eslint/issues/7423
+        "func-names": "off",
+        "global-require": "off",
+        "guard-for-in": "off",
+        "handle-callback-err": "off",
+        "id-blacklist": "off",
+        "id-length": "off",
+        "id-match": "off",
+        "line-comment-position": "off",
+        "lines-around-comment": "off",
+        "max-depth": "off",
+        "max-len": "off",
+        "max-lines": "off",
+        "max-statements": "off",
+        "multiline-ternary": "off",
+        "newline-after-var": "off",
+        "newline-before-return": "off",
+        "newline-per-chained-call": "off",
+        "no-await-in-loop": "off",
+        "no-bitwise": "off",
+        "no-confusing-arrow": "off",
+        "no-continue": "off",
+        "no-eq-null": "off",
+        "no-inline-comments": "off",
+        "no-inner-declarations": "off",
+        "no-labels": "off",
+        "no-magic-numbers": "off",
+        "no-mixed-requires": "off",
+        "no-multi-str": "off",
+        "no-negated-condition": "off",
+        "no-nested-ternary": "off",
+        "no-new-func": "off",
+        "no-path-concat": "off",
+        "no-plusplus": "off",
+        "no-proto": "off",
+        "no-restricted-globals": "off",
+        "no-restricted-imports": "off",
+        "no-restricted-modules": "off",
+        "no-restricted-syntax": "off",
+        "no-sync": "off",
+        "no-ternary": "off",
+        "no-undef-init": "off",
+        "no-undefined": "off",
+        "no-underscore-dangle": "off",
+        "no-warning-comments": "off",
+        "object-property-newline": "off",
+        "one-var-declaration-per-line": "off",
+        "operator-assignment": "off",
+        "prefer-destructuring": "off",
+        "sort-imports": "off",
+        "sort-keys": "off",
+        "sort-vars": "off",
+        "vars-on-top": "off",
+        "wrap-regex": "off",
 
         // Deprecated rules.
         //eslint-disable-next-line sort-keys
         "no-native-reassign": "off",
         "no-negated-in-lhs": "off",
         "no-spaced-func": "off",
+        "prefer-reflect": "off",
 
         //eslint-disable-next-line sort-keys
         "eslint-comments/disable-enable-pair": "error",
@@ -353,7 +353,7 @@ module.exports = {
         }],
 
         "mysticatea/arrow-parens": "error",
-        "mysticatea/block-scoped-var": "off",   // Use on ES5 environment only.
+        "mysticatea/block-scoped-var": "off",
         "mysticatea/no-instanceof-array": "error",
         "mysticatea/no-instanceof-wrapper": "error",
         "mysticatea/no-literal-call": "error",
