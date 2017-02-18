@@ -8,6 +8,7 @@
 module.exports = {
     "plugins": [
         "eslint-comments",
+        "import",
         "mysticatea",
     ],
     "rules": {
@@ -337,6 +338,10 @@ module.exports = {
         "no-spaced-func": "off",
         "prefer-reflect": "off",
 
+        //
+        // Plugins
+        //
+
         //eslint-disable-next-line sort-keys
         "eslint-comments/disable-enable-pair": "error",
         "eslint-comments/no-duplicate-disable": "error",
@@ -354,6 +359,8 @@ module.exports = {
                 "globals",
             ],
         }],
+
+        "import/order": "error",
 
         "mysticatea/arrow-parens": "error",
         "mysticatea/block-scoped-var": "off",
