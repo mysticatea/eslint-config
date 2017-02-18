@@ -5,9 +5,9 @@
  */
 "use strict"
 
-var originalGlobals = require("globals").browser
-var globals = {}
-var allows = [
+const originalGlobals = require("globals").browser
+const globals = {}
+const allows = [
     "atob",
     "btoa",
     "cancelAnimationFrame",
@@ -26,10 +26,10 @@ var allows = [
     "window",
 ]
 
-Object.keys(originalGlobals).forEach(function(key) {
+for (const key of Object.keys(originalGlobals)) {
     if (key[0] === key[0].toUpperCase() || allows.indexOf(key) !== -1) {
         globals[key] = originalGlobals[key]
     }
-})
+}
 
-module.exports = {"globals": globals}
+module.exports = {globals}

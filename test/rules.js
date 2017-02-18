@@ -9,14 +9,14 @@
 // Helpers
 //------------------------------------------------------------------------------
 
-var assert = require("assert")
-var fs = require("fs")
-var path = require("path")
-var validator = require("eslint/lib/config/config-validator")
-var CORE_RULES_DIR = path.join(__dirname, "../node_modules/eslint/lib/rules/")
-var MYSTICATEA_RULES_DIR = path.join(__dirname, "../node_modules/eslint-plugin-mysticatea/lib/rules/")
-var NODE_RULES_DIR = path.join(__dirname, "../node_modules/eslint-plugin-node/lib/rules/")
-var COMMENT_RULES_DIR = path.join(__dirname, "../node_modules/eslint-plugin-eslint-comments/lib/rules/")
+const assert = require("assert")
+const fs = require("fs")
+const path = require("path")
+const validator = require("eslint/lib/config/config-validator")
+const CORE_RULES_DIR = path.join(__dirname, "../node_modules/eslint/lib/rules/")
+const MYSTICATEA_RULES_DIR = path.join(__dirname, "../node_modules/eslint-plugin-mysticatea/lib/rules/")
+const NODE_RULES_DIR = path.join(__dirname, "../node_modules/eslint-plugin-node/lib/rules/")
+const COMMENT_RULES_DIR = path.join(__dirname, "../node_modules/eslint-plugin-eslint-comments/lib/rules/")
 
 /**
  * Gets existing rules from a given directory.
@@ -27,7 +27,7 @@ var COMMENT_RULES_DIR = path.join(__dirname, "../node_modules/eslint-plugin-esli
  */
 function getRuleList(rootPath, prefix) {
     return fs.readdirSync(rootPath)
-        .map(function(filename) {
+        .map(filename => {
             if (path.extname(filename) === ".js") {
                 return prefix + path.basename(filename, ".js")
             }
@@ -43,10 +43,10 @@ function getRuleList(rootPath, prefix) {
  * @returns {boolean} `true` if the rule is an ES6 rule.
  */
 function isES6Rule(name) {
-    var rule = require("eslint/lib/rules/" + name)
-    var meta = rule && rule.meta
-    var docs = meta && meta.docs
-    var category = docs && docs.category
+    const rule = require(`eslint/lib/rules/${name}`)
+    const meta = rule && rule.meta
+    const docs = meta && meta.docs
+    const category = docs && docs.category
 
     return category === "ECMAScript 6"
 }
@@ -58,8 +58,8 @@ function isES6Rule(name) {
  * @returns {boolean} `true` if the rule is deprecated.
  */
 function isDeprecated(name) {
-    var rule = require("eslint/lib/rules/" + name)
-    var meta = rule && rule.meta
+    const rule = require(`eslint/lib/rules/${name}`)
+    const meta = rule && rule.meta
 
     return Boolean(meta && meta.deprecated)
 }
@@ -68,55 +68,55 @@ function isDeprecated(name) {
 // Tests
 //------------------------------------------------------------------------------
 
-describe("'base.js'", function() {
-    var config = require("../base").rules
-    var existingRules = [].concat(
+describe("'base.js'", () => {
+    const config = require("../base").rules
+    const existingRules = [].concat(
         getRuleList(CORE_RULES_DIR, ""),
         getRuleList(MYSTICATEA_RULES_DIR, "mysticatea/"),
         getRuleList(COMMENT_RULES_DIR, "eslint-comments/")
     )
-    var removedRules = Object.keys(require("eslint/conf/replacements.json").rules)
-    var deprecatedRules = getRuleList(CORE_RULES_DIR, "").filter(isDeprecated)
+    const removedRules = Object.keys(require("eslint/conf/replacements.json").rules)
+    const deprecatedRules = getRuleList(CORE_RULES_DIR, "").filter(isDeprecated)
 
-    existingRules.forEach(function(name) {
-        it("should include existing rule '" + name + "'.", function() {
-            assert(name in config, "'" + name + "' is not found.")
+    for (const name of existingRules) {
+        it(`should include existing rule '${name}'.`, () => {
+            assert(name in config, `'${name}' is not found.`)
             validator.validateRuleOptions(name, config[name], "base.js")
         })
-    })
+    }
 
-    removedRules.forEach(function(name) {
-        it("should not include removed rule '" + name + "'.", function() {
-            assert(name in config === false, "'" + name + "' is found.")
+    for (const name of removedRules) {
+        it(`should not include removed rule '${name}'.`, () => {
+            assert(name in config === false, `'${name}' is found.`)
         })
-    })
+    }
 
-    deprecatedRules.forEach(function(name) {
-        it("should turn deprecated rule '" + name + "' off.", function() {
+    for (const name of deprecatedRules) {
+        it(`should turn deprecated rule '${name}' off.`, () => {
             assert.strictEqual(config[name], "off")
         })
-    })
+    }
 })
 
-describe("'node.js'", function() {
-    var config = require("../node").rules
-    var existingRules = getRuleList(NODE_RULES_DIR, "node/")
+describe("'node.js'", () => {
+    const config = require("../node").rules
+    const existingRules = getRuleList(NODE_RULES_DIR, "node/")
 
-    existingRules.forEach(function(name) {
-        it("should include existing rule '" + name + "'.", function() {
-            assert(name in config, "'" + name + "' is not found.")
+    for (const name of existingRules) {
+        it(`should include existing rule '${name}'.`, () => {
+            assert(name in config, `'${name}' is not found.`)
             validator.validateRuleOptions(name, config[name], "node.js")
         })
-    })
+    }
 })
 
-describe("'es5.js'", function() {
-    var config = require("../es5").rules
-    var es6Rules = getRuleList(CORE_RULES_DIR, "").filter(isES6Rule)
+describe("'es5.js'", () => {
+    const config = require("../es5").rules
+    const es6Rules = getRuleList(CORE_RULES_DIR, "").filter(isES6Rule)
 
-    es6Rules.forEach(function(name) {
-        it("should turn ES6 rule '" + name + "' off.", function() {
+    for (const name of es6Rules) {
+        it(`should turn ES6 rule '${name}' off.`, () => {
             assert.strictEqual(config[name], "off")
         })
-    })
+    }
 })
