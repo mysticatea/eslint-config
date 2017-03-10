@@ -120,3 +120,13 @@ describe("'es5.js'", () => {
         })
     }
 })
+
+describe("'browser.js'", () => {
+    const config = require("../browser").rules
+
+    for (const name of Object.keys(config)) {
+        it(`should have valid options of '${name}' rule.`, () => {
+            validator.validateRuleOptions(name, config[name], "browser.js")
+        })
+    }
+})

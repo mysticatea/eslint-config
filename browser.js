@@ -32,4 +32,9 @@ for (const key of Object.keys(originalGlobals)) {
     }
 }
 
-module.exports = {globals}
+module.exports = {
+    globals,
+    "rules": { //
+        "new-cap": ["error", {"capIsNewExceptions": ["EventTargetShim"]}],
+    },
+}
