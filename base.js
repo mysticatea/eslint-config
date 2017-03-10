@@ -154,10 +154,11 @@ module.exports = {
         "no-unused-expressions": "error",
         "no-unused-labels": "error",
         "no-unused-vars": ["error", {
-            "argsIgnorePattern": "^_[a-zA-Z]+$",
+            "args": "all",
+            "argsIgnorePattern": "^_(?:[^_].*)?$",
             "caughtErrors": "all",
             "vars": "all",
-            "varsIgnorePattern": "^_[a-zA-Z]+$",
+            "varsIgnorePattern": "^_(?:[^_].*)?$",
         }],
         "no-use-before-define": ["error", "nofunc"],
         "no-useless-call": "error",
@@ -370,7 +371,7 @@ module.exports = {
         "mysticatea/no-instanceof-wrapper": "error",
         "mysticatea/no-literal-call": "error",
         "mysticatea/no-this-in-static": "error",
-        "mysticatea/no-use-ignored-vars": "error",
+        "mysticatea/no-use-ignored-vars": ["error", "^_(?:[^_].*)?$"],
         "mysticatea/no-useless-rest-spread": "error",
     },
 }
