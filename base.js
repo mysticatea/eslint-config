@@ -334,13 +334,6 @@ module.exports = {
         "vars-on-top": "off",
         "wrap-regex": "off",
 
-        // Deprecated rules.
-        //eslint-disable-next-line sort-keys
-        "no-native-reassign": "off",
-        "no-negated-in-lhs": "off",
-        "no-spaced-func": "off",
-        "prefer-reflect": "off",
-
         //
         // Plugins
         //
@@ -353,7 +346,6 @@ module.exports = {
         "eslint-comments/no-unused-enable": "error",
         "eslint-comments/no-use": ["error", {
             "allow": [
-                "eslint",
                 "eslint-disable",
                 "eslint-disable-line",
                 "eslint-disable-next-line",
@@ -373,5 +365,6 @@ module.exports = {
         "mysticatea/no-this-in-static": "error",
         "mysticatea/no-use-ignored-vars": ["error", "^_(?:[^_].*)?$"],
         "mysticatea/no-useless-rest-spread": "error",
+        "mysticatea/prefer-for-of": "error",
     },
 }

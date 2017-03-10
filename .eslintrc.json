@@ -1,6 +1,6 @@
 {
     "root": true,
-    "extends": ["./es2015.js", "./node.js"],
+    "extends": ["./index.js", "./node.js"],
     "rules": {
         "quote-props": ["error", "always"],
         "sort-keys": "error"

@@ -8,4 +8,5 @@
 module.exports = {
     "env": {"es6": true},
     "extends": "./base.js",
+    "parserOptions": {"ecmaVersion": 2017},
 }

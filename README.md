@@ -26,8 +26,8 @@ Write in your ESLint configurations: http://eslint.org/docs/user-guide/configuri
 
 **First, please choose a base template.**
 
-- `mysticatea` - A rule set for ECMAScript 2015 (ES6).
-- `mysticatea/es5` - A rule set for ES5.
+- `mysticatea` - A rule set for ECMAScript 2017.
+- `mysticatea/es5` - A rule set for ECMAScript 5.
 
 **Second, please choose a optional template and add it.**
 
@@ -35,6 +35,7 @@ Write in your ESLint configurations: http://eslint.org/docs/user-guide/configuri
 - `mysticatea/mocha` - An additional setting for mocha environment.
 - `mysticatea/modules` - An additional setting for ES Modules enviroment.
 - `mysticatea/node` - An additional setting for Node.js environment.
+- `mysticatea/vue` - An additional setting for Vue.js environment. This setting includes `mysticatea/browser` and `mysticatea/node`.
 
 Then, please write those into `extends` field.
 

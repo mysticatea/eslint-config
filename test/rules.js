@@ -48,17 +48,20 @@ function isES6Rule(name) {
     const docs = meta && meta.docs
     const category = docs && docs.category
 
-    return category === "ECMAScript 6"
+    return category === "ECMAScript 6" && !isDeprecated(name)
 }
 
 /**
  * Checks whether a given core rule is deprecated or not.
  *
- * @param {string} name - The name of a core rule.
+ * @param {string} name - The name of a rule.
  * @returns {boolean} `true` if the rule is deprecated.
  */
 function isDeprecated(name) {
-    const rule = require(`eslint/lib/rules/${name}`)
+    const sep = name.indexOf("/")
+    const moduleId = (sep === -1) ? "eslint" : `eslint-plugin-${name.slice(0, sep)}`
+    const ruleId = (sep === -1) ? name : name.slice(sep + 1)
+    const rule = require(`${moduleId}/lib/rules/${ruleId}`)
     const meta = rule && rule.meta
 
     return Boolean(meta && meta.deprecated)
@@ -74,7 +77,7 @@ describe("'base.js'", () => {
         getRuleList(CORE_RULES_DIR, ""),
         getRuleList(MYSTICATEA_RULES_DIR, "mysticatea/"),
         getRuleList(COMMENT_RULES_DIR, "eslint-comments/")
-    )
+    ).filter(name => !isDeprecated(name))
     const removedRules = Object.keys(require("eslint/conf/replacements.json").rules)
     const deprecatedRules = getRuleList(CORE_RULES_DIR, "").filter(isDeprecated)
 
@@ -92,20 +95,27 @@ describe("'base.js'", () => {
     }
 
     for (const name of deprecatedRules) {
-        it(`should turn deprecated rule '${name}' off.`, () => {
-            assert.strictEqual(config[name], "off")
+        it(`should not include deprecated rule '${name}'.`, () => {
+            assert(name in config === false, `'${name}' is found.`)
         })
     }
 })
 
 describe("'node.js'", () => {
     const config = require("../node").rules
-    const existingRules = getRuleList(NODE_RULES_DIR, "node/")
+    const existingRules = getRuleList(NODE_RULES_DIR, "node/").filter(name => !isDeprecated(name))
+    const deprecatedRules = getRuleList(NODE_RULES_DIR, "node/").filter(isDeprecated)
 
     for (const name of existingRules) {
         it(`should include existing rule '${name}'.`, () => {
             assert(name in config, `'${name}' is not found.`)
             validator.validateRuleOptions(name, config[name], "node.js")
+        })
+    }
+
+    for (const name of deprecatedRules) {
+        it(`should not include deprecated rule '${name}'.`, () => {
+            assert(name in config === false, `'${name}' is found.`)
         })
     }
 })
