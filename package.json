@@ -6,11 +6,11 @@
   "files": [
     "base.js",
     "browser.js",
-    "es2015.js",
     "es5.js",
     "mocha.js",
     "modules.js",
-    "node.js"
+    "node.js",
+    "vue.js"
   ],
   "engines": {
     "node": "^4.0.0 || >=6.0.0"
