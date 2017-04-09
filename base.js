@@ -104,7 +104,6 @@ module.exports = {
             ],
         }],
         "no-mixed-spaces-and-tabs": "error",
-        "no-multi-assign": "error",
         "no-multi-spaces": "error",
         "no-multiple-empty-lines": "error",
         "no-new": "error",
@@ -271,7 +270,7 @@ module.exports = {
         "complexity": ["warn", {"max": 12}],
         "max-nested-callbacks": ["warn", {"max": 4}],
         "max-params": ["warn", {"max": 8}],
-        "no-console": "warn",
+        "no-console": ["warn", {"allow": ["assert"]}],
 
         //eslint-disable-next-line sort-keys
         "arrow-parens": "off",     // Use "mysticatea/arrow-parens"
@@ -307,6 +306,7 @@ module.exports = {
         "no-labels": "off",
         "no-magic-numbers": "off",
         "no-mixed-requires": "off",
+        "no-multi-assign": "off",
         "no-multi-str": "off",
         "no-negated-condition": "off",
         "no-nested-ternary": "off",
