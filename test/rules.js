@@ -10,61 +10,30 @@
 //------------------------------------------------------------------------------
 
 const assert = require("assert")
-const fs = require("fs")
-const path = require("path")
-const validator = require("eslint/lib/config/config-validator")
-const CORE_RULES_DIR = path.join(__dirname, "../node_modules/eslint/lib/rules/")
-const MYSTICATEA_RULES_DIR = path.join(__dirname, "../node_modules/eslint-plugin-mysticatea/lib/rules/")
-const NODE_RULES_DIR = path.join(__dirname, "../node_modules/eslint-plugin-node/lib/rules/")
-const COMMENT_RULES_DIR = path.join(__dirname, "../node_modules/eslint-plugin-eslint-comments/lib/rules/")
-
-/**
- * Gets existing rules from a given directory.
- *
- * @param {string} rootPath - A path of rules directory.
- * @param {string} prefix - A prefix.
- * @returns {string[]} Existing rule list.
- */
-function getRuleList(rootPath, prefix) {
-    return fs.readdirSync(rootPath)
-        .map(filename => {
-            if (path.extname(filename) === ".js") {
-                return prefix + path.basename(filename, ".js")
-            }
-            return null
-        })
-        .filter(Boolean)
-}
+const Rules = require("./lib/rules")
 
 /**
  * Checks whether a given core rule is an ES6 rule or not.
  *
- * @param {string} name - The name of a core rule.
+ * @param {string} ruleId - The name of a core rule.
  * @returns {boolean} `true` if the rule is an ES6 rule.
  */
-function isES6Rule(name) {
-    const rule = require(`eslint/lib/rules/${name}`)
-    const meta = rule && rule.meta
-    const docs = meta && meta.docs
-    const category = docs && docs.category
+function isES6Rule(ruleId) {
+    const def = Rules.getRuleDefinition(ruleId)
+    const category = def && def.meta && def.meta.docs && def.meta.docs.category
 
-    return category === "ECMAScript 6" && !isDeprecated(name)
+    return category === "ECMAScript 6"
 }
 
 /**
  * Checks whether a given core rule is deprecated or not.
  *
- * @param {string} name - The name of a rule.
+ * @param {string} ruleId - The name of a rule.
  * @returns {boolean} `true` if the rule is deprecated.
  */
-function isDeprecated(name) {
-    const sep = name.indexOf("/")
-    const moduleId = (sep === -1) ? "eslint" : `eslint-plugin-${name.slice(0, sep)}`
-    const ruleId = (sep === -1) ? name : name.slice(sep + 1)
-    const rule = require(`${moduleId}/lib/rules/${ruleId}`)
-    const meta = rule && rule.meta
-
-    return Boolean(meta && meta.deprecated)
+function isDeprecated(ruleId) {
+    const def = Rules.getRuleDefinition(ruleId)
+    return Boolean(def && def.meta && def.meta.deprecated)
 }
 
 //------------------------------------------------------------------------------
@@ -73,18 +42,19 @@ function isDeprecated(name) {
 
 describe("'base.js'", () => {
     const config = require("../base").rules
-    const existingRules = [].concat(
-        getRuleList(CORE_RULES_DIR, ""),
-        getRuleList(MYSTICATEA_RULES_DIR, "mysticatea/"),
-        getRuleList(COMMENT_RULES_DIR, "eslint-comments/")
-    ).filter(name => !isDeprecated(name))
+    const allRules = [].concat(
+        Rules.getCoreRuleNames(),
+        Rules.getPluginRuleNames("eslint-comments"),
+        Rules.getPluginRuleNames("mysticatea")
+    )
+    const existingRules = allRules.filter(name => !isDeprecated(name))
+    const deprecatedRules = allRules.filter(isDeprecated)
     const removedRules = Object.keys(require("eslint/conf/replacements.json").rules)
-    const deprecatedRules = getRuleList(CORE_RULES_DIR, "").filter(isDeprecated)
 
     for (const name of existingRules) {
         it(`should include existing rule '${name}'.`, () => {
             assert(name in config, `'${name}' is not found.`)
-            validator.validateRuleOptions(name, config[name], "base.js")
+            Rules.validateRuleOptions(name, config[name], "base.js")
         })
     }
 
@@ -103,13 +73,13 @@ describe("'base.js'", () => {
 
 describe("'node.js'", () => {
     const config = require("../node").rules
-    const existingRules = getRuleList(NODE_RULES_DIR, "node/").filter(name => !isDeprecated(name))
-    const deprecatedRules = getRuleList(NODE_RULES_DIR, "node/").filter(isDeprecated)
+    const existingRules = Rules.getPluginRuleNames("node").filter(name => !isDeprecated(name))
+    const deprecatedRules = Rules.getPluginRuleNames("node").filter(isDeprecated)
 
     for (const name of existingRules) {
         it(`should include existing rule '${name}'.`, () => {
             assert(name in config, `'${name}' is not found.`)
-            validator.validateRuleOptions(name, config[name], "node.js")
+            Rules.validateRuleOptions(name, config[name], "node.js")
         })
     }
 
@@ -122,7 +92,7 @@ describe("'node.js'", () => {
 
 describe("'es5.js'", () => {
     const config = require("../es5").rules
-    const es6Rules = getRuleList(CORE_RULES_DIR, "").filter(isES6Rule)
+    const es6Rules = Rules.getCoreRuleNames().filter(isES6Rule).filter(name => !isDeprecated(name))
 
     for (const name of es6Rules) {
         it(`should turn ES6 rule '${name}' off.`, () => {
@@ -136,7 +106,30 @@ describe("'browser.js'", () => {
 
     for (const name of Object.keys(config)) {
         it(`should have valid options of '${name}' rule.`, () => {
-            validator.validateRuleOptions(name, config[name], "browser.js")
+            Rules.validateRuleOptions(name, config[name], "browser.js")
+        })
+    }
+})
+
+describe("'vue.js'", () => {
+    const config = require("../vue").rules
+    const allRules = [].concat(
+        Rules.getPluginRuleNames("node"),
+        Rules.getPluginRuleNames("@mysticatea/vue")
+    )
+    const existingRules = allRules.filter(name => !isDeprecated(name))
+    const deprecatedRules = allRules.filter(isDeprecated)
+
+    for (const name of existingRules) {
+        it(`should include existing rule '${name}'.`, () => {
+            assert(name in config, `'${name}' is not found.`)
+            Rules.validateRuleOptions(name, config[name], "vue.js")
+        })
+    }
+
+    for (const name of deprecatedRules) {
+        it(`should not include deprecated rule '${name}'.`, () => {
+            assert(name in config === false, `'${name}' is found.`)
         })
     }
 })
