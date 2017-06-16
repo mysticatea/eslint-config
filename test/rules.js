@@ -115,8 +115,8 @@ describe("'vue.js'", () => {
     const config = require("../vue").rules
     const allRules = [].concat(
         Rules.getPluginRuleNames("node"),
-        Rules.getPluginRuleNames("@mysticatea/vue")
-    )
+        Rules.getPluginRuleNames("vue")
+    ).filter(name => name !== "vue/jsx-uses-vars")
     const existingRules = allRules.filter(name => !isDeprecated(name))
     const deprecatedRules = allRules.filter(isDeprecated)
 

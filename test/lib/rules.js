@@ -23,7 +23,7 @@ const allRules = new Rules()
 const coreRules = new Rules()
 const plugins = new Plugins(environments, allRules)
 
-plugins.loadAll(["eslint-comments", "mysticatea", "node", "@mysticatea/vue"])
+plugins.loadAll(["eslint-comments", "mysticatea", "node", "vue"])
 
 //------------------------------------------------------------------------------
 // Exports
@@ -36,9 +36,8 @@ plugins.loadAll(["eslint-comments", "mysticatea", "node", "@mysticatea/vue"])
  * @param {string} source The filename of the configuration to show error messages.
  * @returns {void}
  */
-module.exports.validateRuleOptions = (id, options, source) => {
+module.exports.validateRuleOptions = (id, options, source) =>
     Validator.validateRuleOptions(id, options, source, allRules)
-}
 
 /**
  * Get the rule definition of the given ID.
@@ -57,7 +56,7 @@ module.exports.getCoreRuleNames = () =>
 
 /**
  * Get the plugin rules.
- * @param {"eslint-comments"|"mysticatea"|"node"|"@mysticatea/vue"} pluginName The plugin name to get.
+ * @param {"eslint-comments"|"mysticatea"|"node"|"vue"} pluginName The plugin name to get.
  * @returns {object} The core rules. Keys are rule IDs and values are each rule definition.
  */
 module.exports.getPluginRuleNames = (pluginName) =>

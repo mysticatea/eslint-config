@@ -22,7 +22,7 @@
     "eslint-plugin-mysticatea": "^4.2.2",
     "eslint-plugin-node": "^5.0.0",
     "eslint-plugin-react": "^7.1.0",
-    "@mysticatea/eslint-plugin-vue": "^0.2.0"
+    "eslint-plugin-vue": "^3.0.1"
   },
   "dependencies": {
     "eslint-plugin-eslint-comments": "^1.0.1",
@@ -30,8 +30,8 @@
     "eslint-plugin-mysticatea": "^4.2.2",
     "eslint-plugin-node": "^5.0.0",
     "eslint-plugin-react": "^7.1.0",
-    "globals": "^10.0.0",
-    "@mysticatea/eslint-plugin-vue": "^0.2.0"
+    "eslint-plugin-vue": "^3.0.1",
+    "globals": "^10.0.0"
   },
   "devDependencies": {
     "eslint": "^4.0.0",
