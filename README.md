@@ -9,7 +9,7 @@ Shareable configurations of ESLint.
 
 There is basic configuration at [base.js](./base.js).
 
-## :cd: Installation
+## 💿 Installation
 
 ```
 npm install --save-dev eslint eslint-config-mysticatea
@@ -17,10 +17,10 @@ npm install --save-dev eslint eslint-config-mysticatea
 
 ### Requirements
 
-- Node.js `^4.0.0`, `^6.0.0`, or newer.
-- ESLint `^3.7.1`, or newer.
+- Node.js `^4.0.0`, `^6.0.0`, `^8.0.0`, or newer.
+- ESLint `^4.0.0`, or newer.
 
-## :book: Usage
+## 📖 Usage
 
 Write in your ESLint configurations: http://eslint.org/docs/user-guide/configuring#using-the-configuration-from-a-plugin
 
@@ -78,7 +78,7 @@ Then, please write those into `extends` field.
   }
   ```
 
-## :anchor: Semantic Versioning Policy
+## 🚥 Semantic Versioning Policy
 
 This package follows [Semantic Versioning 2.0.0](http://semver.org/)
 
@@ -96,11 +96,11 @@ This package follows [Semantic Versioning 2.0.0](http://semver.org/)
     - Required Node.js version is changed.
     - Required ESLint version is changed.
 
-## :newspaper: Changelog
+## 📰 Changelog
 
 - [GitHub Releases](https://github.com/mysticatea/eslint-config/releases)
 
-## :muscle: Contributing
+## 💎 Contributing
 
 ### Development Tools
 
