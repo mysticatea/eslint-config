@@ -11,6 +11,7 @@ module.exports = {
         "import",
         "mysticatea",
     ],
+    "root": true,
     "rules": {
         "accessor-pairs": "error",
         "array-bracket-spacing": "error",
