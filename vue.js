@@ -7,10 +7,10 @@
 
 module.exports = {
     "extends": ["./browser.js", "./modules.js"],
-    "globals": {"process": false},
+    "globals": { "process": false },
     "parser": "vue-eslint-parser",
     "parserOptions": {
-        "ecmaFeatures": {"jsx": true},
+        "ecmaFeatures": { "jsx": true },
         "ecmaVersion": 2017,
     },
     "plugins": ["node", "react"],
@@ -70,7 +70,7 @@ module.exports = {
         "vue/valid-v-text": "error",
     },
     "settings": {
-        "node": {"tryExtensions": [".js", ".json", ".vue"]},
-        "react": {"pragma": "h"},
+        "node": { "tryExtensions": [".js", ".json", ".vue"] },
+        "react": { "pragma": "h" },
     },
 }

@@ -6,7 +6,7 @@
 "use strict"
 
 module.exports = {
-    "env": {"es6": true},
+    "env": { "es6": true },
     "extends": "./base.js",
-    "parserOptions": {"ecmaVersion": 2017},
+    "parserOptions": { "ecmaVersion": 2017 },
 }

@@ -22,7 +22,7 @@ module.exports = {
         "setInterval": false,
         "setTimeout": false,
     },
-    "parserOptions": {"ecmaFeatures": {"globalReturn": true}},
+    "parserOptions": { "ecmaFeatures": { "globalReturn": true } },
     "plugins": ["node"],
     "rules": {
         "node/exports-style": ["error", "module.exports"],

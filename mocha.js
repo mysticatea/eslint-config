@@ -19,5 +19,5 @@ module.exports = {
         "xdescribe": false,
         "xit": false,
     },
-    "rules": {"max-nested-callbacks": "off"},
+    "rules": { "max-nested-callbacks": "off" },
 }
