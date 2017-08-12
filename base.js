@@ -37,6 +37,7 @@ module.exports = {
         "func-call-spacing": "error",
         "func-style": ["error", "declaration"],
         "generator-star-spacing": ["error", "after"],
+        "getter-return": "error",
         "indent": ["error", 4, {"SwitchCase": 1, "flatTernaryExpressions": true}],
         "init-declarations": "error",
         "jsx-quotes": ["error", "prefer-double"],
@@ -174,7 +175,7 @@ module.exports = {
         "no-with": "error",
         "nonblock-statement-body-position": "error",
         "object-curly-newline": ["error", {"consistent": true}],
-        "object-curly-spacing": "error",
+        "object-curly-spacing": ["error"],
         "object-shorthand": ["error", "always", {"avoidExplicitReturnArrows": true}],
         "one-var": ["error", {
             "initialized": "never",
