@@ -5,4 +5,12 @@
  */
 "use strict"
 
-module.exports = { "parserOptions": { "sourceType": "module" } }
+module.exports = {
+    "parserOptions": { "sourceType": "module" },
+    "plugins": ["node"],
+    "rules": {
+        "node/no-extraneous-import": "error",
+        "node/no-missing-import": "error",
+        "node/no-unpublished-import": "error",
+    },
+}
