@@ -23,7 +23,7 @@ const allRules = new Rules()
 const coreRules = new Rules()
 const plugins = new Plugins(environments, allRules)
 
-plugins.loadAll(["eslint-comments", "mysticatea", "node", "vue"])
+plugins.loadAll(["eslint-comments", "import", "mysticatea", "node", "vue"])
 
 //------------------------------------------------------------------------------
 // Exports

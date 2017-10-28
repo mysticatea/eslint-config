@@ -44,6 +44,7 @@ module.exports = {
         "for-direction": "error",
         "func-call-spacing": "error",
         "func-style": ["error", "declaration"],
+        "function-paren-newline": ["error", "consistent"],
         "generator-star-spacing": ["error", "after"],
         "getter-return": "error",
         "indent": ["error", 4, { "SwitchCase": 1, "flatTernaryExpressions": true }],
@@ -52,7 +53,9 @@ module.exports = {
         "key-spacing": "error",
         "keyword-spacing": "error",
         "linebreak-style": ["error", "unix"],
+        "lines-between-class-members": "error",
         "max-statements-per-line": ["error", { "max": 1 }],
+        "multiline-comment-style": ["error", "separate-lines"],
         "new-cap": "error",
         "new-parens": "error",
         "no-alert": "error",
@@ -359,7 +362,9 @@ module.exports = {
 
         //eslint-disable-next-line sort-keys
         "eslint-comments/disable-enable-pair": "error",
+        "eslint-comments/no-aggregating-enable": "error",
         "eslint-comments/no-duplicate-disable": "error",
+        "eslint-comments/no-restricted-disable": "off",
         "eslint-comments/no-unlimited-disable": "error",
         "eslint-comments/no-unused-disable": "error",
         "eslint-comments/no-unused-enable": "error",

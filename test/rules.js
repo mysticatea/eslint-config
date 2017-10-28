@@ -71,12 +71,34 @@ describe("'base.js'", () => {
     }
 })
 
+describe("'modules.js'", () => {
+    const config = require("../modules").rules
+    const existingRules = [].concat(
+        Rules.getPluginRuleNames("import"),
+        Rules.getPluginRuleNames("node")
+    ).filter(name => !isDeprecated(name))
+
+    for (const name of Object.keys(config)) {
+        describe(name, () => {
+            it("should be a valid rule", () => {
+                assert(existingRules.includes(name))
+            })
+            it("should have valid options", () => {
+                Rules.validateRuleOptions(name, config[name], "modules.js")
+            })
+        })
+    }
+})
+
 describe("'node.js'", () => {
     const config = require("../node").rules
     const existingRules = Rules.getPluginRuleNames("node").filter(name => !isDeprecated(name))
     const deprecatedRules = Rules.getPluginRuleNames("node").filter(isDeprecated)
 
     for (const name of existingRules) {
+        if (name.includes("import")) {
+            continue
+        }
         it(`should include existing rule '${name}'.`, () => {
             assert(name in config, `'${name}' is not found.`)
             Rules.validateRuleOptions(name, config[name], "node.js")
@@ -113,10 +135,7 @@ describe("'browser.js'", () => {
 
 describe("'vue.js'", () => {
     const config = require("../vue").rules
-    const allRules = [].concat(
-        Rules.getPluginRuleNames("node"),
-        Rules.getPluginRuleNames("vue")
-    ).filter(name => name !== "vue/jsx-uses-vars")
+    const allRules = Rules.getPluginRuleNames("vue")
     const existingRules = allRules.filter(name => !isDeprecated(name))
     const deprecatedRules = allRules.filter(isDeprecated)
 

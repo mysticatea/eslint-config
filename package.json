@@ -16,26 +16,24 @@
     "node": ">=4.0.0"
   },
   "peerDependencies": {
-    "eslint": "^4.4.1",
-    "eslint-plugin-eslint-comments": "^1.0.3",
-    "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-mysticatea": "^4.2.2",
-    "eslint-plugin-node": "^5.1.1",
-    "eslint-plugin-react": "^7.2.0",
-    "eslint-plugin-vue": "^3.11.0"
+    "eslint": "^4.10.0",
+    "eslint-plugin-eslint-comments": "^2.0.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-mysticatea": "^4.2.4",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-vue": "^3.13.1"
   },
   "dependencies": {
-    "eslint-plugin-eslint-comments": "^1.0.3",
-    "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-mysticatea": "^4.2.2",
-    "eslint-plugin-node": "^5.1.1",
-    "eslint-plugin-react": "^7.2.0",
-    "eslint-plugin-vue": "^3.11.0",
-    "globals": "^10.0.0"
+    "eslint-plugin-eslint-comments": "^2.0.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-mysticatea": "^4.2.4",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-vue": "^3.13.1",
+    "globals": "^10.1.0"
   },
   "devDependencies": {
-    "eslint": "^4.4.1",
-    "mocha": "^3.5.0"
+    "eslint": "^4.10.0",
+    "mocha": "^4.0.1"
   },
   "scripts": {
     "preversion": "npm test",
