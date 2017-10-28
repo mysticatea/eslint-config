@@ -11,9 +11,6 @@ const allows = [
     "atob",
     "btoa",
     "cancelAnimationFrame",
-    "clearInterval",
-    "clearTimeout",
-    "console",
     "document",
     "fetch",
     "indexedDB",
@@ -21,8 +18,6 @@ const allows = [
     "matchMedia",
     "requestAnimationFrame",
     "sessionStorage",
-    "setInterval",
-    "setTimeout",
     "window",
 ]
 

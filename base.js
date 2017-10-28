@@ -6,6 +6,14 @@
 "use strict"
 
 module.exports = {
+    "globals": {
+        "Intl": false,
+        "clearInterval": false,
+        "clearTimeout": false,
+        "console": false,
+        "setInterval": false,
+        "setTimeout": false,
+    },
     "plugins": [
         "eslint-comments",
         "import",

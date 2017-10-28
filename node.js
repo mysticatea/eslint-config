@@ -7,20 +7,14 @@
 
 module.exports = {
     "globals": {
-        "Intl": false,
         "__dirname": false,
         "__filename": false,
         "clearImmediate": false,
-        "clearInterval": false,
-        "clearTimeout": false,
-        "console": false,
         "exports": false,
         "module": false,
         "process": false,
         "require": false,
         "setImmediate": false,
-        "setInterval": false,
-        "setTimeout": false,
     },
     "parserOptions": { "ecmaFeatures": { "globalReturn": true } },
     "plugins": ["node"],
