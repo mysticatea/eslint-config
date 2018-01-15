@@ -12,6 +12,17 @@
 const assert = require("assert")
 const Rules = require("./lib/rules")
 
+// Polyfill Array.prototype.includes for Node 4.
+if (typeof Array.prototype.includes === "undefined") {
+    Object.defineProperty(Array.prototype, "includes", { //eslint-disable-line no-extend-native
+        "configurable": true,
+        "value": function includes(value) {
+            return this.indexOf(value) !== -1
+        },
+        "writable": true,
+    })
+}
+
 /**
  * Checks whether a given core rule is an ES6 rule or not.
  *
