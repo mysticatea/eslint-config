@@ -18,7 +18,7 @@ npm install --save-dev eslint eslint-config-mysticatea
 ### Requirements
 
 - Node.js `^4.0.0`, `^6.0.0`, `^8.0.0`, or newer.
-- ESLint `^4.0.0`, or newer.
+- ESLint `^4.14.0`, or newer.
 
 ## 📖 Usage
 
@@ -35,7 +35,7 @@ Write in your ESLint configurations: http://eslint.org/docs/user-guide/configuri
 - `mysticatea/mocha` - An additional setting for mocha environment.
 - `mysticatea/modules` - An additional setting for ES Modules enviroment.
 - `mysticatea/node` - An additional setting for Node.js environment.
-- `mysticatea/vue` - An additional setting for Vue.js environment. This setting includes `mysticatea/browser` and `mysticatea/node`.
+- `mysticatea/vue` - An additional setting for Vue.js environment. This setting includes `mysticatea/browser` and `mysticatea/modules`.
 
 Then, please write those into `extends` field.
 

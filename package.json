@@ -16,23 +16,23 @@
     "node": ">=4.0.0"
   },
   "peerDependencies": {
-    "eslint": "^4.10.0",
+    "eslint": "^4.15.0",
     "eslint-plugin-eslint-comments": "^2.0.0",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-mysticatea": "^4.2.4",
     "eslint-plugin-node": "^5.2.1",
-    "eslint-plugin-vue": "^3.13.1"
+    "eslint-plugin-vue": "^4.2.0"
   },
   "dependencies": {
     "eslint-plugin-eslint-comments": "^2.0.0",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-mysticatea": "^4.2.4",
     "eslint-plugin-node": "^5.2.1",
-    "eslint-plugin-vue": "^3.13.1",
+    "eslint-plugin-vue": "^4.2.0",
     "globals": "^10.1.0"
   },
   "devDependencies": {
-    "eslint": "^4.10.0",
+    "eslint": "^4.15.0",
     "mocha": "^4.0.1"
   },
   "scripts": {

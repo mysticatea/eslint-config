@@ -37,7 +37,7 @@ plugins.loadAll(["eslint-comments", "import", "mysticatea", "node", "vue"])
  * @returns {void}
  */
 module.exports.validateRuleOptions = (id, options, source) =>
-    Validator.validateRuleOptions(id, options, source, allRules)
+    Validator.validateRuleOptions(allRules.get(id), id, options, source)
 
 /**
  * Get the rule definition of the given ID.
