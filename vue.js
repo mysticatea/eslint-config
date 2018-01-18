@@ -8,11 +8,9 @@
 module.exports = {
     "extends": ["./browser.js", "./modules.js"],
     "globals": { "process": false },
-    "parser": "vue-eslint-parser",
-    "parserOptions": {
-        "ecmaFeatures": { "jsx": true },
-        "ecmaVersion": 2017,
-    },
+    "parser": require.resolve("vue-eslint-parser"),
+    "parserOptions": { "ecmaFeatures": { "jsx": true } },
+    "plugins": ["vue"],
     "rules": {
         "no-process-env": "off",
         "vue/attribute-hyphenation": "error",
