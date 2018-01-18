@@ -25,7 +25,13 @@ module.exports = {
         "vue/html-quotes": "error",
         "vue/html-self-closing": "error",
         "vue/jsx-uses-vars": "error",
-        "vue/max-attributes-per-line": "error",
+        "vue/max-attributes-per-line": ["error", {
+            "multiline": {
+                "allowFirstLine": true,
+                "max": 1,
+            },
+            "singleline": 3,
+        }],
         "vue/mustache-interpolation-spacing": "error",
         "vue/name-property-casing": "error",
         "vue/no-async-in-computed-properties": "error",
