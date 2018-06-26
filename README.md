@@ -1,9 +1,6 @@
 # eslint-config-mysticatea
 
-[![npm version](https://img.shields.io/npm/v/eslint-config-mysticatea.svg)](https://www.npmjs.com/package/eslint-config-mysticatea)
-[![Downloads/month](https://img.shields.io/npm/dm/eslint-config-mysticatea.svg)](http://www.npmtrends.com/eslint-config-mysticatea)
-[![Build Status](https://travis-ci.org/mysticatea/eslint-config.svg?branch=master)](https://travis-ci.org/mysticatea/eslint-config)
-[![Dependency Status](https://david-dm.org/mysticatea/eslint-config.svg)](https://david-dm.org/mysticatea/eslint-config)
+**This package was deprecated.** Please use [@mysticatea/eslint-plugin](https://github.com/mysticatea/eslint-plugin) instead.
 
 Shareable configurations of ESLint.
 
@@ -77,39 +74,3 @@ Then, please write those into `extends` field.
       "extends": ["mysticatea", "mysticatea/browser"]
   }
   ```
-
-## 🚥 Semantic Versioning Policy
-
-This package follows [Semantic Versioning 2.0.0](http://semver.org/)
-
-- Patch release:
-    - A new rule is disabled.
-    - A rule's option is changed that results in ESLint reporting fewer errors.
-    - Re-releasing after a failed release (i.e., publishing a release that doesn't work for anyone).
-- Minor release:
-    - A new preset is created.
-    - An existing preset is deprecated.
-- Major release:
-    - An existing preset is removed.
-    - A new rule is enabled.
-    - A rule's option is changed that results in ESLint reporting more errors.
-    - Required Node.js version is changed.
-    - Required ESLint version is changed.
-
-## 📰 Changelog
-
-- [GitHub Releases](https://github.com/mysticatea/eslint-config/releases)
-
-## 💎 Contributing
-
-### Development Tools
-
-- `npm test` runs tests.
-- `npm run watch` runs tests when source code are changed.
-
-There is a test script.
-
-- Check lacking configurations of new rules.
-- Check configurations of rules. (options are valid or not)
-- Check configurations of deprecated rules. (should turn those off)
-- Check configurations of removed rules. (should remove those)
